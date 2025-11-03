@@ -133,10 +133,11 @@ As a Trackside Engineer for Honda in the IndyCar series, I play a crucial role i
 ### Proton Therapy Engineer
 **Siemens Healthineers / Varian** | *March 2022 - May 2024* | *Peoria, IL*
 
-Built the Proton Accelerator system from the beginning with Siemens/Varian for my hometown area in Peoria, IL. From project initiation to treating the first patient, I was integral to the complete system development and deployment.
+First engineer on-site from project initiation, building the Proton Accelerator system from the beginning with Siemens/Varian for my hometown area in Peoria, IL. Led the project from installation phase through first patient treatment, ensuring system readiness and successful inaugural treatment.
 
 **Key Responsibilities:**
-- Led the complete build and installation of the Proton Accelerator system from the beginning
+- First engineer on-site from project initiation, building the Proton Accelerator system from the beginning
+- Led project from installation phase through first patient treatment, ensuring system readiness and successful inaugural treatment
 - First engineer to operate the cyclotron for the inaugural patient at OSF Cancer Center
 - Led a team of 10 electricians in the installation of 38 electrical cabinets
 - Successfully completed all required ETL certifications
@@ -148,10 +149,12 @@ Built the Proton Accelerator system from the beginning with Siemens/Varian for m
 - Worked directly with doctors and staff as one of the main engineers on site
 
 **Key Achievements:**
+- First engineer on-site from project initiation through first patient treatment
 - Built Proton Accelerator system from ground up for Peoria, IL area
 - First engineer to operate cyclotron for inaugural patient at OSF Cancer Center
 - Successfully led installation team for complex medical equipment
 - Managed all IT infrastructure for critical medical system
+- Ensured system readiness for first patient treatment through rigorous testing and validation
 
 ---
 
@@ -179,31 +182,35 @@ As an Advanced Systems Engineer, I was responsible for installing, programming, 
 ### Data Engineer / Race Strategist
 **Cameron Racing** | *January 2017 - March 2020* | *Sonoma, CA*
 
-As a Data Engineer and Race Strategist at Cameron Racing, I was responsible for handling data from each race session and developing race strategies:
+As a Data Engineer and Race Strategist at Cameron Racing, I was responsible for handling data from each race session and developing race strategies for SRO World Challenge and IMSA series:
 
-- Analyzing data from race sessions to optimize performance
+- Developed race strategies for SRO World Challenge and IMSA series
+- Analyzing data from race sessions to optimize performance and develop live race strategy during competitions
 - Developing and implementing race strategies in collaboration with the team owner, drivers, and mechanics
 - Troubleshooting wiring and technical issues
 - Serving as the IT Coordinator, ensuring the smooth operation of computers, networking, printers, and other technical equipment
 - Managing live timing and scoring, as well as live data and telemetry from the cars to the computers on the timing stand
 
-**Key Skills:** Data Analysis, Race Strategy, IT Coordination, Telemetry Systems, Technical Troubleshooting
+**Key Skills:** Data Analysis, Race Strategy, IT Coordination, Telemetry Systems, Technical Troubleshooting, IMSA, SRO World Challenge
 
 ---
 
 ### Team Manager / Electronics Engineer
 **Davidson Racing** | *June 2012 - January 2019* | *Sparks, NV*
 
-As a Team Manager and Electronics Engineer at Davidson Racing, I was responsible for a wide range of tasks to ensure the success of the team:
+As a Team Manager and Electronics Engineer at Davidson Racing, I managed comprehensive racing operations including fleet management, logistics, race strategy, and team operations:
 
-- Managing logistics, race strategy, and team operations
+- Acquired and managed fleet of racing vehicles and multi-million dollar collector cars
+- Managed both street car fleet and racing fleet operations
+- Managing full team operations including logistics, race strategy, and car procurement
+- Developed and implemented race strategies for NASA competitions
 - Coordinating flights, hotels, and other travel arrangements for the team
 - Building and maintaining race cars and multi-million dollar collection cars
 - Designing and building wiring harnesses, programming computers, ECUs, and PDMs
 - Serving as the IT Coordinator, ensuring the smooth operation of computers, networking, and other technical equipment
 - Working closely with the team owner, drivers, and mechanics to optimize performance and achieve team goals
 
-**Key Skills:** Team Management, Electronics Engineering, Logistics, IT Systems, Vehicle Maintenance, Project Coordination
+**Key Skills:** Team Management, Fleet Management, Car Acquisition, Electronics Engineering, Logistics, IT Systems, Vehicle Maintenance, Project Coordination, NASA
 
 ---
 
