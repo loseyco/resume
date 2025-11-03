@@ -4,7 +4,7 @@
 
 ### Post 1: Direct & Professional (Recommended for First Post)
 ```
-🎯 After 20+ years of building solutions as an Electronics Engineer, Coder, and Manager, I'm actively seeking new remote opportunities.
+🎯 After 20+ years of building solutions as an Electronics Engineer, Coder, and Manager, I'm seeking new opportunities - both remote work and freelance projects.
 
 🏁 Recently completed contract work with Honda Racing Corporation as a trackside engineer (including Indy 500 win and 2x Manufacturer Championships).
 
@@ -12,11 +12,19 @@
 
 🔧 From building the Proton Accelerator system for my hometown to managing professional racing teams, I've solved complex problems across multiple industries.
 
-✅ Available for remote work - full-time, part-time, or contract roles.
+✅ Available for:
+- Remote work opportunities (full-time, part-time, contract)
+- Side projects & freelance work
+- Business websites & web development
+- Coding projects & custom software
+- Race team fly-ins & data handling
+- Technical consulting
+
+Let's build something amazing together!
 
 Check out my resume: resume.losey.co
 
-#RemoteWork #SoftwareEngineer #WebDeveloper #ElectronicsEngineer #RacingEngineer #Hiring
+#RemoteWork #FreelanceDeveloper #WebDeveloper #ElectronicsEngineer #RacingEngineer #Hiring
 ```
 
 ### Post 2: Achievement-Focused
@@ -27,11 +35,17 @@ But here's what you might not know: I'm also an Electronics Engineer who built t
 
 I love working from home, getting things done quickly and efficiently. Whether leading teams, working solo, or collaborating, I'm a troubleshooter who thinks outside the box to deliver results on time.
 
-Currently seeking remote opportunities where I can apply 20+ years of experience to innovative projects.
+Open to:
+✓ Remote employment opportunities
+✓ Freelance projects & side work
+✓ Business websites & web development
+✓ Custom coding projects
+✓ Race team data handling & fly-ins
+✓ Technical consulting
 
 👉 resume.losey.co
 
-#CareerChange #RemoteJobs #Engineering #SoftwareDevelopment #Racing
+#FreelanceDeveloper #RemoteJobs #Engineering #SoftwareDevelopment #Racing #WebDevelopment
 ```
 
 ### Post 3: Story-Driven (Personal)
@@ -44,16 +58,22 @@ Since then, I've:
 ✅ Managed professional racing teams across IndyCar, IMSA, SRO World Challenge
 ✅ Led installations for companies from daycares to State Farm headquarters
 ✅ Coded daily on modern web projects (React, Supabase, Vercel)
+✅ Built websites and software for businesses of all sizes
 
-Now I'm looking for my next challenge. 
+And I'm still taking on projects! 💪
 
 I'm an Electronics Engineer, Coder, and Manager who works just as well solo as I do in teams. I love remote work because it lets me focus on delivering quality solutions without workplace distractions.
 
+Currently available for:
+• Remote employment (full-time, part-time, contract)
+• Freelance web development & business websites
+• Coding projects & custom software solutions
+• Race team data handling & trackside support
+• Technical consulting & IT projects
+
 Check out my resume: resume.losey.co
 
-Open to full-time, part-time, and contract remote opportunities.
-
-#OpenToWork #RemoteWork #SoftwareEngineer #WebDeveloper #ElectronicsEngineer
+#OpenToWork #FreelanceDeveloper #RemoteWork #SoftwareEngineer #WebDeveloper #ElectronicsEngineer
 ```
 
 ### Post 4: Problem-Solving Angle
@@ -66,15 +86,21 @@ When my hometown needed a Proton Accelerator system, I led the project from star
 
 When racing teams needed data analysis and strategy, I built systems that gave them competitive advantages.
 
+When businesses needed websites or custom software, I delivered solutions that worked.
+
 Now I'm looking for the next problem to solve.
 
 I'm an Electronics Engineer, Coder, and Manager with 20+ years of experience. I code daily on modern web projects, leverage AI tools to work faster, and deliver results - whether working solo or leading teams.
 
-Available for remote work opportunities.
+Available for:
+🔹 Remote employment opportunities
+🔹 Freelance projects (websites, software, coding)
+🔹 Race team data handling & fly-ins
+🔹 Business web development & consulting
 
 resume.losey.co
 
-#ProblemSolver #SoftwareDeveloper #RemoteWork #Hiring #TechJobs
+#ProblemSolver #FreelanceDeveloper #SoftwareDeveloper #RemoteWork #Hiring #TechJobs
 ```
 
 ### Post 5: Tech-Stack Focused
@@ -95,11 +121,17 @@ But here's what sets me apart:
 💻 Codes daily, managing multiple projects simultaneously
 🏠 Loves remote work and gets things done efficiently
 
-I'm an Electronics Engineer, Coder, and Manager seeking remote opportunities where I can bring this unique combination of skills to your team.
+I'm an Electronics Engineer, Coder, and Manager available for:
+• Remote employment opportunities
+• Freelance web development & business websites
+• Custom coding projects & software development
+• Race team data handling & trackside engineering
+
+Bringing this unique skill set to your next project.
 
 Check it out: resume.losey.co
 
-#WebDeveloper #SoftwareEngineer #React #Supabase #Vercel #RemoteWork
+#WebDeveloper #FreelanceDeveloper #SoftwareEngineer #React #Supabase #Vercel #RemoteWork
 ```
 
 ### Post 6: Humble Brag / Results-Driven
@@ -113,14 +145,20 @@ Results speak louder than words.
 🔧 Built Proton Accelerator system for Peoria, IL
 💼 Led teams across medical equipment, racing, and corporate environments
 💻 Coded daily for 20+ years
+🌐 Built countless websites and applications for businesses
 
 I'm an Electronics Engineer, Coder, and Manager who loves working remotely, thinks creatively to solve problems, and delivers results on time - every time.
 
-Currently seeking new remote opportunities.
+Currently available for:
+🎯 Remote employment opportunities
+🎯 Freelance projects & side work
+🎯 Business websites & web development
+🎯 Coding projects & custom software
+🎯 Race team data handling & fly-ins
 
-resume.losey.co
+Let's work together: resume.losey.co
 
-#Engineering #SoftwareDevelopment #RemoteWork #Hiring #TechJobs
+#FreelanceDeveloper #Engineering #SoftwareDevelopment #RemoteWork #Hiring #TechJobs
 ```
 
 ---
@@ -131,7 +169,7 @@ resume.losey.co
 ```
 Hey everyone! 👋
 
-After 20+ years of building, managing, and coding, I'm actively looking for new remote work opportunities.
+After 20+ years of building, managing, and coding, I'm actively looking for new opportunities - both remote work and freelance projects!
 
 I'm that weird combination of:
 - Electronics Engineer (built Proton Accelerator for my hometown!)
@@ -141,11 +179,18 @@ I'm that weird combination of:
 
 I love working from home and getting things done efficiently. No office drama, just results. 🏠💻
 
-If you know anyone hiring for remote engineering, web development, or IT roles - send them my way!
+What I'm available for:
+✓ Remote employment (full-time, part-time, contract)
+✓ Building websites for businesses
+✓ Coding projects & custom software
+✓ Race team data handling & fly-ins
+✓ Technical consulting & IT work
+
+If you know anyone who needs a website, coding help, or is hiring remotely - send them my way!
 
 Check out my resume: resume.losey.co
 
-#RemoteWork #Hiring #SoftwareDeveloper #ElectronicsEngineer
+#FreelanceDeveloper #RemoteWork #Hiring #SoftwareDeveloper #ElectronicsEngineer #WebDeveloper
 ```
 
 ### Post 2: Achievement Showcase
@@ -249,7 +294,7 @@ Love what I do and ready for the next challenge!
 
 ## Quick Copy for LinkedIn Profile Headline
 ```
-Electronics Engineer | Coder | Manager | 20+ Years Experience | Remote Work Available | resume.losey.co
+Electronics Engineer | Coder | Manager | 20+ Years Experience | Remote Work & Freelance Available | resume.losey.co
 ```
 
 ## Quick Copy for LinkedIn About Section
@@ -262,7 +307,15 @@ Currently working daily on modern web applications using React, Supabase, Vercel
 
 I love working remotely and getting things done efficiently. Whether leading teams, working solo, or collaborating, I'm a natural troubleshooter who thinks outside the box to deliver results on time.
 
-Available for remote opportunities - full-time, part-time, or contract.
+Available for:
+• Remote employment opportunities (full-time, part-time, contract)
+• Freelance projects & side work
+• Business websites & web development
+• Custom coding projects & software development
+• Race team data handling & trackside engineering fly-ins
+• Technical consulting & IT projects
+
+Let's build something amazing together!
 
 Check out my resume: resume.losey.co
 ```
