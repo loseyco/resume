@@ -15,7 +15,7 @@
 
 ## PROFESSIONAL SUMMARY
 
-Skilled and experienced electronics engineer and manager with a proven track record across multiple industries. Extensive experience as a Proton Therapy Engineer at Siemens Healthineers, leading teams of electricians and working directly with doctors and staff. Recently completed contract work as a Trackside Engineer for Honda in the IndyCar series.
+Skilled and experienced electronics engineer and manager with a proven track record across multiple industries. Currently serving as a Trackside Engineer for Honda in the IndyCar series. Extensive experience as a Proton Therapy Engineer at Siemens Healthineers, leading teams of electricians and working directly with doctors and staff.
 
 Proven ability to handle data, race strategy, and IT coordination in various roles within the racing industry. Strong background in automotive engineering, network administration, and customer service. 
 
@@ -110,9 +110,9 @@ Committed to providing high-quality work and customer satisfaction. Actively see
 ## PROFESSIONAL EXPERIENCE
 
 ### IndyCar Trackside Engineer
-**Honda Racing Corporation** | *May 2024 - December 2024* | *Remote*
+**Honda Racing Corporation** | *May 2024 - Present* | *Remote*
 
-As a Trackside Engineer for Honda in the IndyCar series, I played a crucial role in ensuring the performance and reliability of race cars during events. My responsibilities included:
+As a Trackside Engineer for Honda in the IndyCar series, I play a crucial role in ensuring the performance and reliability of race cars during events. My responsibilities include:
 
 - Collaborating with drivers, mechanics, and other team members to optimize car performance
 - Monitoring and analyzing data from the car's systems to identify and resolve issues
