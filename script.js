@@ -255,6 +255,55 @@ if (currentYearElement) {
     currentYearElement.textContent = new Date().getFullYear();
 }
 
+/**
+ * Interactive Code Output
+ * Simulates code execution in the hero code window
+ */
+const codeOutput = document.getElementById('code-output');
+if (codeOutput) {
+    // Clear initial loading text
+    codeOutput.innerHTML = '';
+    
+    const outputLines = [
+        { delay: 800, text: 'buildAmazingThings(professional);', type: 'command' },
+        { delay: 1200, text: 'Building amazing things...', type: 'process' },
+        { delay: 1600, text: '✓ Portfolio website created', type: 'success' },
+        { delay: 2000, text: '✓ Resume optimized', type: 'success' },
+        { delay: 2400, text: '✓ Ready for opportunities', type: 'success' },
+        { delay: 2800, text: '✓ Success! Professional is ready to build.', type: 'final' }
+    ];
+    
+    let currentLine = 0;
+    
+    function showNextLine() {
+        if (currentLine < outputLines.length) {
+            const line = outputLines[currentLine];
+            setTimeout(() => {
+                const outputLine = document.createElement('div');
+                outputLine.className = 'output-line';
+                
+                if (line.type === 'command') {
+                    outputLine.innerHTML = `<span class="output-prompt">$</span> <span class="output-command">${line.text}</span>`;
+                } else if (line.type === 'final') {
+                    outputLine.innerHTML = `<span class="output-success">${line.text}</span>`;
+                } else if (line.type === 'process') {
+                    outputLine.innerHTML = `<span class="output-prompt">></span> <span class="output-text">${line.text}</span>`;
+                } else {
+                    outputLine.innerHTML = `<span class="output-prompt">></span> <span class="output-success">${line.text}</span>`;
+                }
+                
+                codeOutput.appendChild(outputLine);
+                codeOutput.scrollTop = codeOutput.scrollHeight;
+                currentLine++;
+                showNextLine();
+            }, currentLine === 0 ? line.delay : line.delay - (currentLine > 0 ? outputLines[currentLine - 1].delay : 0));
+        }
+    }
+    
+    // Start animation after a brief delay
+    setTimeout(showNextLine, 1000);
+}
+
 // Console easter egg for developers
 console.log('%c👋 Hey there!', 'font-size: 20px; font-weight: bold; color: #00d9ff;');
 console.log('%cWant to see the code? Check out the source!', 'font-size: 14px; color: #a1a1aa;');
