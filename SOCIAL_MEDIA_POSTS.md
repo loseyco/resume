@@ -4,15 +4,15 @@
 
 ### Post 1: Direct & Professional (Recommended for First Post)
 ```
-🎯 After 20+ years of building solutions as an Electronics Engineer, Coder, and Manager, I'm seeking new opportunities - both remote work and freelance projects.
+After 20+ years of building solutions as an Electronics Engineer, Coder, and Manager, I'm seeking new opportunities - both remote work and freelance projects.
 
-🏁 Recently completed contract work with Honda Racing Corporation as a trackside engineer (including Indy 500 win and 2x Manufacturer Championships).
+Currently serving as a trackside engineer for Honda Racing Corporation in the IndyCar series, with achievements including Indy 500 win and 2x Manufacturer Championships.
 
-💻 These days I'm coding daily on modern web projects using React, Supabase, Vercel, and AI-powered tools like Cursor.
+I code daily on modern web projects using React, Supabase, Vercel, and AI-powered tools like Cursor to work more efficiently and deliver results faster.
 
-🔧 From building the Proton Accelerator system for my hometown to managing professional racing teams, I've solved complex problems across multiple industries.
+From building the Proton Accelerator system for my hometown to managing professional racing teams, I've solved complex problems across multiple industries.
 
-✅ Available for:
+Available for:
 - Remote work opportunities (full-time, part-time, contract)
 - Side projects & freelance work
 - Business websites & web development
@@ -20,7 +20,7 @@
 - Race team fly-ins & data handling
 - Technical consulting
 
-Let's build something amazing together!
+Let's build something amazing together.
 
 Check out my resume: pjlosey.com
 
@@ -29,7 +29,7 @@ Check out my resume: pjlosey.com
 
 ### Post 2: Achievement-Focused
 ```
-🏆 Indy 500 Winner. 2x IndyCar Manufacturer Championships. 25 Hours of Thunderhill Overall Winner.
+Indy 500 Winner. 2x IndyCar Manufacturer Championships. 25 Hours of Thunderhill Overall Winner.
 
 But here's what you might not know: I'm also an Electronics Engineer who built the Proton Accelerator system from the ground up, a Manager who's led teams across industries, and a Coder who builds modern web apps daily.
 
@@ -43,7 +43,7 @@ Open to:
 ✓ Race team data handling & fly-ins
 ✓ Technical consulting
 
-👉 pjlosey.com
+pjlosey.com
 
 #FreelanceDeveloper #RemoteJobs #Engineering #SoftwareDevelopment #Racing #WebDevelopment
 ```
@@ -53,14 +53,14 @@ Open to:
 20+ years ago, I started freelancing and never stopped building.
 
 Since then, I've:
-✅ Won the Indy 500 with Honda Racing
-✅ Built a Proton Accelerator system for my hometown
-✅ Managed professional racing teams across IndyCar, IMSA, SRO World Challenge
-✅ Led installations for companies from daycares to State Farm headquarters
-✅ Coded daily on modern web projects (React, Supabase, Vercel)
-✅ Built websites and software for businesses of all sizes
+- Won the Indy 500 with Honda Racing
+- Built a Proton Accelerator system for my hometown
+- Managed professional racing teams across IndyCar, IMSA, SRO World Challenge
+- Led installations for companies from daycares to State Farm headquarters
+- Coded daily on modern web projects (React, Supabase, Vercel)
+- Built websites and software for businesses of all sizes
 
-And I'm still taking on projects! 💪
+And I'm still taking on projects.
 
 I'm an Electronics Engineer, Coder, and Manager who works just as well solo as I do in teams. I love remote work because it lets me focus on delivering quality solutions without workplace distractions.
 
@@ -93,10 +93,10 @@ Now I'm looking for the next problem to solve.
 I'm an Electronics Engineer, Coder, and Manager with 20+ years of experience. I code daily on modern web projects, leverage AI tools to work faster, and deliver results - whether working solo or leading teams.
 
 Available for:
-🔹 Remote employment opportunities
-🔹 Freelance projects (websites, software, coding)
-🔹 Race team data handling & fly-ins
-🔹 Business web development & consulting
+• Remote employment opportunities
+• Freelance projects (websites, software, coding)
+• Race team data handling & fly-ins
+• Business web development & consulting
 
 pjlosey.com
 
@@ -105,21 +105,21 @@ pjlosey.com
 
 ### Post 5: Tech-Stack Focused
 ```
-🛠️ Modern tech stack? Check.
+Modern tech stack? Check.
 
-✅ React, Supabase, Vercel
-✅ n8n, Zapier for automation
-✅ AI-powered development with Cursor
-✅ 20+ years of PHP, SQL, JavaScript experience
-✅ Electronics engineering background
+React, Supabase, Vercel
+n8n, Zapier for automation
+AI-powered development with Cursor
+20+ years of PHP, SQL, JavaScript experience
+Electronics engineering background
 
 But here's what sets me apart:
 
-🏁 IndyCar trackside engineer (Indy 500 Winner)
-⚡ Built Proton Accelerator system from scratch
-👥 Led teams of 10+ across multiple industries
-💻 Codes daily, managing multiple projects simultaneously
-🏠 Loves remote work and gets things done efficiently
+IndyCar trackside engineer (Indy 500 Winner)
+Built Proton Accelerator system from scratch
+Led teams of 10+ across multiple industries
+Codes daily, managing multiple projects simultaneously
+Loves remote work and gets things done efficiently
 
 I'm an Electronics Engineer, Coder, and Manager available for:
 • Remote employment opportunities
@@ -134,27 +134,27 @@ Check it out: pjlosey.com
 #WebDeveloper #FreelanceDeveloper #SoftwareEngineer #React #Supabase #Vercel #RemoteWork
 ```
 
-### Post 6: Humble Brag / Results-Driven
+### Post 6: Results-Driven
 ```
 Results speak louder than words.
 
-🏆 Indy 500 Winner
-🏆 2x IndyCar Manufacturer Championships  
-🏆 25 Hours of Thunderhill Overall Winner
-🏆 SRO World Challenge Championship Leader
-🔧 Built Proton Accelerator system for Peoria, IL
-💼 Led teams across medical equipment, racing, and corporate environments
-💻 Coded daily for 20+ years
-🌐 Built countless websites and applications for businesses
+Indy 500 Winner
+2x IndyCar Manufacturer Championships  
+25 Hours of Thunderhill Overall Winner
+SRO World Challenge Championship Leader
+Built Proton Accelerator system for Peoria, IL
+Led teams across medical equipment, racing, and corporate environments
+Coded daily for 20+ years
+Built countless websites and applications for businesses
 
 I'm an Electronics Engineer, Coder, and Manager who loves working remotely, thinks creatively to solve problems, and delivers results on time - every time.
 
 Currently available for:
-🎯 Remote employment opportunities
-🎯 Freelance projects & side work
-🎯 Business websites & web development
-🎯 Coding projects & custom software
-🎯 Race team data handling & fly-ins
+• Remote employment opportunities
+• Freelance projects & side work
+• Business websites & web development
+• Coding projects & custom software
+• Race team data handling & fly-ins
 
 Let's work together: pjlosey.com
 
@@ -167,17 +167,17 @@ Let's work together: pjlosey.com
 
 ### Post 1: Personal & Engaging
 ```
-Hey everyone! 👋
+Hey everyone,
 
 After 20+ years of building, managing, and coding, I'm actively looking for new opportunities - both remote work and freelance projects!
 
-I'm that weird combination of:
+I'm that unique combination of:
 - Electronics Engineer (built Proton Accelerator for my hometown!)
 - Racing Engineer (won Indy 500, worked with Honda Racing)
 - Manager (led teams across industries)
 - Coder (daily work with React, Supabase, modern web tech)
 
-I love working from home and getting things done efficiently. No office drama, just results. 🏠💻
+I love working from home and getting things done efficiently. No office drama, just results.
 
 What I'm available for:
 ✓ Remote employment (full-time, part-time, contract)
@@ -195,9 +195,9 @@ Check out my resume: pjlosey.com
 
 ### Post 2: Achievement Showcase
 ```
-From winning the Indy 500 to building medical equipment to coding modern web apps - my career has been anything but boring! 🏁💻⚡
+From winning the Indy 500 to building medical equipment to coding modern web apps - my career has been anything but boring!
 
-I'm an Electronics Engineer, Coder, and Manager with 20+ years of experience. Currently seeking remote opportunities where I can bring this unique skill set to innovative projects.
+I'm an Electronics Engineer, Coder, and Manager with 20+ years of experience. Currently seeking remote opportunities and freelance projects where I can bring this unique skill set to innovative projects.
 
 Check out my resume: pjlosey.com
 
@@ -210,7 +210,7 @@ Open to full-time, part-time, and contract work!
 
 ### Post 1: Short & Punchy
 ```
-🏁 Indy 500 Winner → 💻 Modern Web Developer → 🔧 Electronics Engineer
+Indy 500 Winner → Modern Web Developer → Electronics Engineer
 
 20+ years of building solutions. Currently seeking remote opportunities.
 
@@ -238,13 +238,13 @@ Seeking remote opportunities: pjlosey.com
 ### Post 1: Visual Story
 ```
 Caption:
-From trackside at the Indy 500 🏁 to coding modern web apps 💻 to building medical equipment ⚡ - my career has taken me across industries and roles.
+From trackside at the Indy 500 to coding modern web apps to building medical equipment - my career has taken me across industries and roles.
 
 I'm an Electronics Engineer, Coder, and Manager with 20+ years of experience, currently seeking new remote opportunities.
 
 Love what I do and ready for the next challenge!
 
-👉 Link in bio: pjlosey.com
+Link in bio: pjlosey.com
 
 #RemoteWork #SoftwareEngineer #ElectronicsEngineer #RacingEngineer #CareerJourney
 ```
@@ -282,6 +282,7 @@ Love what I do and ready for the next challenge!
 - `#CareerChange`
 - `#IndyCar`
 - `#Racing`
+- `#FreelanceDeveloper`
 
 ### Follow-Up Strategy:
 - Week 1: Post 1 (Direct & Professional)
@@ -301,7 +302,7 @@ Electronics Engineer | Coder | Manager | 20+ Years Experience | Remote Work & Fr
 ```
 Electronics Engineer, Coder, and Manager with 20+ years of experience across multiple industries. 
 
-Recent achievements include Indy 500 Winner and 2x IndyCar Manufacturer Championships with Honda Racing Corporation. Built the Proton Accelerator system from the ground up for my hometown of Peoria, IL. 
+Currently serving as a Trackside Engineer for Honda in the IndyCar series. Built the Proton Accelerator system from the ground up for my hometown of Peoria, IL. 
 
 Currently working daily on modern web applications using React, Supabase, Vercel, and AI-powered development tools.
 
@@ -315,12 +316,11 @@ Available for:
 • Race team data handling & trackside engineering fly-ins
 • Technical consulting & IT projects
 
-Let's build something amazing together!
+Let's build something amazing together.
 
 Check out my resume: pjlosey.com
 ```
 
 ---
 
-Good luck with your job search! 🚀
-
+Good luck with your job search!
