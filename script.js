@@ -373,21 +373,18 @@ const nextBtn = document.getElementById('carousel-next');
 // Load photos from local folder - dynamically generated
 // Photos will be loaded from the photos/ folder
 async function loadPhotos() {
+    // Wait a moment for photo-list.js to load if it exists
+    await new Promise(resolve => setTimeout(resolve, 100));
+    
     // Try to load from generated photo-list.js if it exists
-    if (typeof photoFiles !== 'undefined' && photoFiles.length > 0) {
+    if (typeof photoFiles !== 'undefined' && photoFiles && photoFiles.length > 0) {
+        console.log(`Loaded ${photoFiles.length} photos from photo-list.js`);
         return photoFiles;
     }
     
-    // Fallback: try to fetch a list of photos from the server
-    // This requires the photos to be accessible via HTTP
-    try {
-        // If you have a server that can list files, use this approach
-        // For now, return empty and show placeholder
-        return [];
-    } catch (error) {
-        console.log('Photo list not found - photos need to be downloaded');
-        return [];
-    }
+    // No photos found
+    console.log('No photos found - download photos and run download_photos.py');
+    return [];
 }
 
 // Photo URLs - will be populated from photos folder
