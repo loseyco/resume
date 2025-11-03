@@ -12,7 +12,7 @@ Hey Charles,
 
 Been a while! I've been up in the area a lot lately - Round Lake Beach, think it's about 30 minutes from Siemens.
 
-I'm looking for work up there and potentially moving to the area, so I thought of you. Since you trained me at Getz Fire, I went on to work at Varian/Siemens on the proton accelerator in Peoria, IL - built it from the beginning to treating the first patient. I'm currently doing trackside engineering for Honda in IndyCar, but I'm looking for something a bit more grounded where I can "grow up" a little, as they say.
+I'm looking for work up there and potentially moving to the area, so I thought of you. After you trained me at Getz Fire, I went on to work at Varian/Siemens on the proton accelerator in Peoria, IL - built it from the beginning to treating the first patient. I'm currently doing trackside engineering for Honda in IndyCar, but I'm looking for something a bit more grounded where I can "grow up" a little, as they say.
 
 I've attached my resume and updated my website to show what I've been doing: https://pjlosey.com
 
@@ -31,7 +31,7 @@ Hope you're doing well! It's been a while since we worked together at Getz Fire.
 
 I'm reaching out because I'm exploring new opportunities in the area - I've been spending time in Round Lake Beach (about 30 minutes from Siemens) and am considering relocating there.
 
-After Getz, I went on to work at Varian/Siemens on the proton accelerator project in Peoria, IL, where I was the first engineer on-site and led the project from initiation through first patient treatment. Currently, I'm a trackside engineer for Honda in IndyCar, but I'm looking for a more stable, long-term position where I can continue to grow professionally.
+After Getz Fire, I went on to work at Varian/Siemens on the proton accelerator project in Peoria, IL, where I was the first engineer on-site and led the project from initiation through first patient treatment. Currently, I'm a trackside engineer for Honda in IndyCar, but I'm looking for a more stable, long-term position where I can continue to grow professionally.
 
 I've attached my resume and updated my website (https://pjlosey.com) with my current experience and projects.
 
