@@ -1,0 +1,25 @@
+{
+  "name": "pj-losey-resume",
+  "version": "1.0.0",
+  "description": "Professional resume website for PJ Losey - Software Engineer & AI Developer",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "dev": "npx http-server -p 8080 -o"
+  },
+  "keywords": [
+    "resume",
+    "portfolio",
+    "software-engineer",
+    "ai-developer",
+    "web-developer"
+  ],
+  "author": "PJ Losey",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loseyco/resume.git"
+  },
+  "homepage": "https://resume.losey.co"
+}
+
