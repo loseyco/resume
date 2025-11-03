@@ -22,7 +22,7 @@
 
 Let's build something amazing together!
 
-Check out my resume: resume.losey.co
+Check out my resume: pjlosey.com
 
 #RemoteWork #FreelanceDeveloper #WebDeveloper #ElectronicsEngineer #RacingEngineer #Hiring
 ```
@@ -43,7 +43,7 @@ Open to:
 ✓ Race team data handling & fly-ins
 ✓ Technical consulting
 
-👉 resume.losey.co
+👉 pjlosey.com
 
 #FreelanceDeveloper #RemoteJobs #Engineering #SoftwareDevelopment #Racing #WebDevelopment
 ```
@@ -71,7 +71,7 @@ Currently available for:
 • Race team data handling & trackside support
 • Technical consulting & IT projects
 
-Check out my resume: resume.losey.co
+Check out my resume: pjlosey.com
 
 #OpenToWork #FreelanceDeveloper #RemoteWork #SoftwareEngineer #WebDeveloper #ElectronicsEngineer
 ```
@@ -98,7 +98,7 @@ Available for:
 🔹 Race team data handling & fly-ins
 🔹 Business web development & consulting
 
-resume.losey.co
+pjlosey.com
 
 #ProblemSolver #FreelanceDeveloper #SoftwareDeveloper #RemoteWork #Hiring #TechJobs
 ```
@@ -129,7 +129,7 @@ I'm an Electronics Engineer, Coder, and Manager available for:
 
 Bringing this unique skill set to your next project.
 
-Check it out: resume.losey.co
+Check it out: pjlosey.com
 
 #WebDeveloper #FreelanceDeveloper #SoftwareEngineer #React #Supabase #Vercel #RemoteWork
 ```
@@ -156,7 +156,7 @@ Currently available for:
 🎯 Coding projects & custom software
 🎯 Race team data handling & fly-ins
 
-Let's work together: resume.losey.co
+Let's work together: pjlosey.com
 
 #FreelanceDeveloper #Engineering #SoftwareDevelopment #RemoteWork #Hiring #TechJobs
 ```
@@ -188,7 +188,7 @@ What I'm available for:
 
 If you know anyone who needs a website, coding help, or is hiring remotely - send them my way!
 
-Check out my resume: resume.losey.co
+Check out my resume: pjlosey.com
 
 #FreelanceDeveloper #RemoteWork #Hiring #SoftwareDeveloper #ElectronicsEngineer #WebDeveloper
 ```
@@ -199,7 +199,7 @@ From winning the Indy 500 to building medical equipment to coding modern web app
 
 I'm an Electronics Engineer, Coder, and Manager with 20+ years of experience. Currently seeking remote opportunities where I can bring this unique skill set to innovative projects.
 
-Check out my resume: resume.losey.co
+Check out my resume: pjlosey.com
 
 Open to full-time, part-time, and contract work!
 ```
@@ -214,7 +214,7 @@ Open to full-time, part-time, and contract work!
 
 20+ years of building solutions. Currently seeking remote opportunities.
 
-Check out my resume: resume.losey.co
+Check out my resume: pjlosey.com
 
 #RemoteWork #SoftwareEngineer #WebDeveloper #Hiring
 ```
@@ -226,7 +226,7 @@ Coded with AI-powered tools.
 Led teams across industries.
 Won championships in racing.
 
-Seeking remote opportunities: resume.losey.co
+Seeking remote opportunities: pjlosey.com
 
 #React #Supabase #Vercel #RemoteWork #WebDeveloper
 ```
@@ -244,7 +244,7 @@ I'm an Electronics Engineer, Coder, and Manager with 20+ years of experience, cu
 
 Love what I do and ready for the next challenge!
 
-👉 Link in bio: resume.losey.co
+👉 Link in bio: pjlosey.com
 
 #RemoteWork #SoftwareEngineer #ElectronicsEngineer #RacingEngineer #CareerJourney
 ```
@@ -294,7 +294,7 @@ Love what I do and ready for the next challenge!
 
 ## Quick Copy for LinkedIn Profile Headline
 ```
-Electronics Engineer | Coder | Manager | 20+ Years Experience | Remote Work & Freelance Available | resume.losey.co
+Electronics Engineer | Coder | Manager | 20+ Years Experience | Remote Work & Freelance Available | pjlosey.com
 ```
 
 ## Quick Copy for LinkedIn About Section
@@ -317,7 +317,7 @@ Available for:
 
 Let's build something amazing together!
 
-Check out my resume: resume.losey.co
+Check out my resume: pjlosey.com
 ```
 
 ---
