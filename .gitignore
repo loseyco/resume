@@ -37,3 +37,11 @@ node_modules/
 # photos/
 # photo-list.js
 
+# Custom resumes (personalized for applications)
+resumes/*.pdf
+resumes/*.docx
+resumes/*.doc
+resumes/**/*.pdf
+resumes/**/*.docx
+resumes/**/*.doc
+

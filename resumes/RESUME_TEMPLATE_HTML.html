@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJ Losey - Resume</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.75in;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.75in;
+            font-size: 11pt;
+        }
+        h1 {
+            font-size: 24pt;
+            margin-bottom: 5pt;
+            color: #000;
+        }
+        h2 {
+            font-size: 14pt;
+            margin-top: 20pt;
+            margin-bottom: 8pt;
+            color: #000;
+            border-bottom: 2px solid #000;
+            padding-bottom: 4pt;
+        }
+        h3 {
+            font-size: 12pt;
+            margin-top: 12pt;
+            margin-bottom: 6pt;
+            color: #000;
+        }
+        h4 {
+            font-size: 11pt;
+            margin-top: 8pt;
+            margin-bottom: 4pt;
+            color: #666;
+            font-style: italic;
+        }
+        p {
+            margin-bottom: 8pt;
+            text-align: justify;
+        }
+        ul {
+            margin-left: 20pt;
+            margin-bottom: 8pt;
+        }
+        li {
+            margin-bottom: 4pt;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20pt;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10pt;
+        }
+        .contact-info {
+            margin-top: 8pt;
+            font-size: 10pt;
+            line-height: 1.8;
+        }
+        .contact-info strong {
+            font-weight: 600;
+        }
+        .section {
+            margin-bottom: 15pt;
+            page-break-inside: avoid;
+        }
+        .experience-item {
+            margin-bottom: 15pt;
+            page-break-inside: avoid;
+        }
+        .key-achievements {
+            margin-top: 8pt;
+            padding-left: 15pt;
+            border-left: 3px solid #ccc;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10pt;
+            margin-bottom: 10pt;
+        }
+        .skills-category {
+            margin-bottom: 8pt;
+        }
+        .skills-category h4 {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 4pt;
+        }
+        .skills-category ul {
+            margin-left: 15pt;
+            font-size: 10pt;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 15pt 0;
+        }
+        @media print {
+            body {
+                padding: 0.5in;
+            }
+            .no-print {
+                display: none;
+            }
+            h2 {
+                page-break-after: avoid;
+            }
+            .experience-item {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>PATRICK "PJ" LOSEY</h1>
+        <h2>Electronics Engineer / Computers / IT / Manager</h2>
+        <div class="contact-info">
+            <strong>Location:</strong> Monmouth, IL | Remote / Available Worldwide<br>
+            <strong>Phone:</strong> (309) 335-8324<br>
+            <strong>Email:</strong> pjlosey@outlook.com<br>
+            <strong>LinkedIn:</strong> linkedin.com/in/pjlosey<br>
+            <strong>Website:</strong> pjlosey.com<br>
+            <strong>Authorized to work in the US</strong>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <p>Skilled and experienced electronics engineer and manager with a proven track record across multiple industries. Currently serving as a Trackside Engineer for Honda in the IndyCar series. Extensive experience as a Proton Therapy Engineer at Siemens Healthineers, leading teams of electricians and working directly with doctors and staff.</p>
+        <p>Proven ability to handle data, race strategy, and IT coordination in various roles within the racing industry. Strong background in automotive engineering, network administration, and customer service.</p>
+        <p><strong>Modern Development Expertise:</strong> I leverage cutting-edge tools including React, Supabase, Vercel, and automation platforms like n8n and Zapier to build efficient, scalable solutions. As an early adopter of AI-powered development tools, I use AI assistants in IDEs like Cursor to enhance productivity, accelerate development cycles, and deliver high-quality code faster. I code daily at home, managing multiple projects simultaneously while maintaining high standards.</p>
+        <p><strong>Versatile Professional:</strong> Comfortable in both corporate environments with Microsoft Suite (Teams, Outlook, Excel) and hands-on field work with commercial fire equipment. I love working from home, getting things done quickly and efficiently without the workplace environment. I have no issues handling daily operations myself but also work well in a team environment as needed. Whether leading teams, working solo, or collaborating as a team player, I'm a natural troubleshooter who thinks outside the box to get work done on time and right. My work style is flexible, results-driven, and focused on delivering quality solutions efficiently.</p>
+        <p>Committed to providing high-quality work and customer satisfaction. Actively seeking new remote opportunities and available for freelance projects, business websites, coding projects, race team data handling, and technical consulting.</p>
+    </div>
+
+    <div class="section">
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="skills-grid">
+            <div class="skills-category">
+                <h4>Electronics & Engineering</h4>
+                <ul>
+                    <li>Electronics Engineering & Design</li>
+                    <li>Wiring Harness Design & Construction</li>
+                    <li>ECU Programming & Configuration</li>
+                    <li>PDM Systems</li>
+                    <li>Circuit Design & Troubleshooting</li>
+                    <li>Medical Equipment Operation & Maintenance</li>
+                    <li>Fire Panel & Alarm System Installation</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h4>Software & Web Development</h4>
+                <ul>
+                    <li><strong>Languages:</strong> PHP (20+ years), JavaScript (Expert), Python, SQL, HTML/CSS</li>
+                    <li><strong>Modern Frameworks:</strong> React, Next.js, Node.js</li>
+                    <li><strong>Cloud Platforms:</strong> Vercel, Supabase, Cloud Services</li>
+                    <li><strong>No-Code/Low-Code:</strong> Bubble.io, Rapid Prototyping</li>
+                    <li>Front & Backend Web Development</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h4>Modern Web Technologies & Automation</h4>
+                <ul>
+                    <li><strong>Deployment:</strong> Vercel (Expert), GitHub Pages</li>
+                    <li><strong>Backend as a Service:</strong> Supabase (Database, Auth, APIs)</li>
+                    <li><strong>Automation Platforms:</strong> n8n, Zapier, Workflow Automation</li>
+                    <li><strong>AI Tools:</strong> Cursor AI, GPT Integration, AI-Assisted Coding</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h4>IT & Systems</h4>
+                <ul>
+                    <li>Network Administration</li>
+                    <li>Server Configuration & Setup</li>
+                    <li>Router & Switch Configuration</li>
+                    <li>IT Coordination & Support</li>
+                    <li>Systems Integration</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h4>Racing & Performance</h4>
+                <ul>
+                    <li>Data Analysis & Telemetry</li>
+                    <li>Race Strategy Development</li>
+                    <li>Live Timing & Scoring</li>
+                    <li>Performance Optimization</li>
+                    <li>Team Management & Logistics</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h4>Work Style & Strengths</h4>
+                <ul>
+                    <li>Team Leader - Proven ability to lead and manage teams</li>
+                    <li>Solo Worker - Effective independent contributor</li>
+                    <li>Team Player - Collaborative and supportive</li>
+                    <li>Troubleshooter - Natural problem-solver</li>
+                    <li>Creative Problem Solver - Thinks outside the box</li>
+                    <li>Multi-Project Management - Codes daily, managing multiple projects</li>
+                    <li>Results-Driven - Focused on getting work done on time and right</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        
+        <div class="experience-item">
+            <h3>IndyCar Trackside Engineer</h3>
+            <h4>Honda Racing Corporation | May 2024 - Present | Remote</h4>
+            <p>As a Trackside Engineer for Honda in the IndyCar series, I play a crucial role in ensuring the performance and reliability of race cars during events. My responsibilities include:</p>
+            <ul>
+                <li>Collaborating with drivers, mechanics, and other team members to optimize car performance</li>
+                <li>Monitoring and analyzing data from the car's systems to identify and resolve issues</li>
+                <li>Making real-time adjustments to the car's setup based on track conditions and driver feedback</li>
+                <li>Conducting pre-race inspections and post-race evaluations to ensure compliance with technical regulations</li>
+                <li>Providing technical support and troubleshooting during race weekends</li>
+                <li>Working closely with Honda's engineering team to implement new technologies and improvements</li>
+            </ul>
+            <div class="key-achievements">
+                <strong>Key Achievements:</strong>
+                <ul>
+                    <li><strong>Indy 500 Winner</strong> with Honda</li>
+                    <li><strong>2x IndyCar Manufacturer Championships</strong> with Honda</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <h3>Proton Therapy Engineer</h3>
+            <h4>Siemens Healthineers / Varian | March 2022 - May 2024 | Peoria, IL</h4>
+            <p>First engineer on-site from project initiation, building the Proton Accelerator system from the beginning with Siemens/Varian for my hometown area in Peoria, IL. Led the project from installation phase through first patient treatment, ensuring system readiness and successful inaugural treatment.</p>
+            <ul>
+                <li>First engineer on-site from project initiation, building the Proton Accelerator system from the beginning</li>
+                <li>Led project from installation phase through first patient treatment, ensuring system readiness and successful inaugural treatment</li>
+                <li>First engineer to operate the cyclotron for the inaugural patient at OSF Cancer Center</li>
+                <li>Led a team of 10 electricians in the installation of 38 electrical cabinets</li>
+                <li>Successfully completed all required ETL certifications</li>
+                <li>Installed software, configured switches, routers, and servers</li>
+                <li>Managed daily reports and QA documents</li>
+                <li>Served as the Safety Manager and oversaw calibrated tools</li>
+                <li>Ran machine during treatments and performed preventive maintenance</li>
+                <li>Provided IT support and ensured the smooth operation of the system</li>
+                <li>Worked directly with doctors and staff as one of the main engineers on site</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Advanced Systems Engineer</h3>
+            <h4>GETZ FIRE EQUIPMENT | April 2021 - April 2022 | Peoria, IL</h4>
+            <ul>
+                <li>Installing and programming fire panel and alarm systems</li>
+                <li>Setting up systems for a range of clients, from local daycares to large corporate headquarters like State Farm</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Car Chief</h3>
+            <h4>Rearden Racing | February 2020 - April 2021</h4>
+            <ul>
+                <li>Lead Mechanic / Car Chief for #1910GT3 Lamborghini in SRO World Challenge</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Data Engineer / Race Strategist</h3>
+            <h4>Cameron Racing | January 2017 - March 2020 | Sonoma, CA</h4>
+            <ul>
+                <li>Developed race strategies for SRO World Challenge and IMSA series</li>
+                <li>Analyzing data from race sessions to optimize performance and develop live race strategy during competitions</li>
+                <li>Developing and implementing race strategies in collaboration with the team owner, drivers, and mechanics</li>
+                <li>Troubleshooting wiring and technical issues</li>
+                <li>Serving as the IT Coordinator, ensuring the smooth operation of computers, networking, printers, and other technical equipment</li>
+                <li>Managing live timing and scoring, as well as live data and telemetry from the cars to the computers on the timing stand</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Team Manager / Electronics Engineer</h3>
+            <h4>Davidson Racing | June 2012 - January 2019 | Sparks, NV</h4>
+            <ul>
+                <li>Acquired and managed fleet of racing vehicles and multi-million dollar collector cars</li>
+                <li>Managed both street car fleet and racing fleet operations</li>
+                <li>Managing full team operations including logistics, race strategy, and car procurement</li>
+                <li>Developed and implemented race strategies for NASA competitions</li>
+                <li>Coordinating flights, hotels, and other travel arrangements for the team</li>
+                <li>Building and maintaining race cars and multi-million dollar collection cars</li>
+                <li>Designing and building wiring harnesses, programming computers, ECUs, and PDMs</li>
+                <li>Serving as the IT Coordinator, ensuring the smooth operation of computers, networking, and other technical equipment</li>
+                <li>Working closely with the team owner, drivers, and mechanics to optimize performance and achieve team goals</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Freelancer</h3>
+            <h4>Losey.Co | January 2002 - Present | Monmouth, IL</h4>
+            <ul>
+                <li>Website design, front and backend development</li>
+                <li>Computer building and repair</li>
+                <li>Fly-ins for professional race teams</li>
+                <li>Technical consulting and custom solutions</li>
+                <li>IT services and support</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>RACING ACHIEVEMENTS & SERIES EXPERIENCE</h2>
+        <p><strong>Professional Racing Series:</strong> IndyCar, SRO World Challenge, IMSA, NASA, Davidson Racing</p>
+        <p><strong>Major Achievements:</strong></p>
+        <ul>
+            <li><strong>Indy 500 Winner</strong> - Honda Racing Corporation</li>
+            <li><strong>2x IndyCar Manufacturer Championships</strong> - Honda Racing Corporation</li>
+            <li><strong>25 Hours of Thunderhill</strong> - Overall Winner</li>
+            <li><strong>SRO World Challenge</strong> - Championship Leader</li>
+            <li><strong>24 Hours of Daytona</strong> - Participant</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>EDUCATION</h2>
+        <h3>Associate in Electronics Engineering</h3>
+        <h4>Hamilton Technical College | Davenport, IA | June 2002 - June 2004</h4>
+    </div>
+
+    <div class="section">
+        <h2>AVAILABILITY</h2>
+        <ul>
+            <li><strong>Actively seeking new remote opportunities</strong></li>
+            <li><strong>Open to full-time, part-time, and contract positions</strong></li>
+            <li><strong>Available for freelance projects & side work</strong></li>
+            <li><strong>Business websites & web development</strong></li>
+            <li><strong>Coding projects & custom software</strong></li>
+            <li><strong>Race team data handling & fly-ins</strong></li>
+            <li><strong>Technical consulting & IT projects</strong></li>
+            <li><strong>Flexible time zones</strong></li>
+            <li><strong>Worldwide availability</strong></li>
+        </ul>
+    </div>
+
+    <hr>
+    <p style="text-align: center; font-size: 9pt; color: #666;"><em>This resume is available online at pjlosey.com</em></p>
+</body>
+</html>
+
