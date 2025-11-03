@@ -266,18 +266,21 @@ if (codeOutput) {
     
     const outputLines = [
         { delay: 800, text: 'buildAmazingThings(professional);', type: 'command' },
-        { delay: 1200, text: 'Building amazing things...', type: 'process' },
-        { delay: 1600, text: '✓ Portfolio website created', type: 'success' },
-        { delay: 2000, text: '✓ Resume optimized', type: 'success' },
-        { delay: 2400, text: '✓ Ready for opportunities', type: 'success' },
-        { delay: 2800, text: '✓ Success! Professional is ready to build.', type: 'final' }
+        { delay: 400, text: 'Building amazing things...', type: 'process' },
+        { delay: 400, text: '✓ Portfolio website created', type: 'success' },
+        { delay: 400, text: '✓ Resume optimized', type: 'success' },
+        { delay: 400, text: '✓ Ready for opportunities', type: 'success' },
+        { delay: 400, text: '✓ Success! Professional is ready to build.', type: 'final' }
     ];
     
     let currentLine = 0;
+    let accumulatedDelay = 0;
     
     function showNextLine() {
         if (currentLine < outputLines.length) {
             const line = outputLines[currentLine];
+            accumulatedDelay += line.delay;
+            
             setTimeout(() => {
                 const outputLine = document.createElement('div');
                 outputLine.className = 'output-line';
@@ -296,7 +299,7 @@ if (codeOutput) {
                 codeOutput.scrollTop = codeOutput.scrollHeight;
                 currentLine++;
                 showNextLine();
-            }, currentLine === 0 ? line.delay : line.delay - (currentLine > 0 ? outputLines[currentLine - 1].delay : 0));
+            }, line.delay);
         }
     }
     
