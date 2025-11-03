@@ -23,7 +23,7 @@ Proven ability to handle data, race strategy, and IT coordination in various rol
 
 **Versatile Professional:** Comfortable in both corporate environments with Microsoft Suite (Teams, Outlook, Excel) and hands-on field work with commercial fire equipment. I love working from home, getting things done quickly and efficiently without the workplace environment. I have no issues handling daily operations myself but also work well in a team environment as needed. Whether leading teams, working solo, or collaborating as a team player, I'm a natural troubleshooter who thinks outside the box to get work done on time and right. My work style is flexible, results-driven, and focused on delivering quality solutions efficiently.
 
-Committed to providing high-quality work and customer satisfaction. Actively seeking new remote opportunities.
+Committed to providing high-quality work and customer satisfaction. Actively seeking new remote opportunities and available for freelance projects, business websites, coding projects, race team data handling, and technical consulting.
 
 ---
 
@@ -312,11 +312,14 @@ Self-employed experience including:
 
 ✅ **Actively seeking new remote opportunities**  
 ✅ **Open to full-time, part-time, and contract positions**  
-✅ **Available for immediate start**  
+✅ **Available for freelance projects & side work**  
+✅ **Business websites & web development**  
+✅ **Coding projects & custom software**  
+✅ **Race team data handling & fly-ins**  
+✅ **Technical consulting & IT projects**  
 ✅ **Flexible time zones**  
-✅ **Worldwide availability**  
-✅ **Contract ending - ready for next opportunity**
+✅ **Worldwide availability**
 
 ---
 
-*This resume is available online at [resume.losey.co](https://resume.losey.co)*
+*This resume is available online at [pjlosey.com](https://pjlosey.com)*
