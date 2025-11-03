@@ -314,6 +314,35 @@ body {
     transform: translateY(-2px);
 }
 
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.share-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+}
+
+.share-btn:active {
+    transform: translateY(0);
+}
+
+.share-btn.shared {
+    background: var(--primary);
+    color: var(--bg-primary);
+    border-color: var(--primary);
+}
+
 .hero-social {
     display: flex;
     gap: 1rem;

@@ -307,6 +307,60 @@ if (codeOutput) {
     setTimeout(showNextLine, 1000);
 }
 
+/**
+ * Native Share Feature
+ * Uses Web Share API to share resume via OS-native share dialog
+ */
+const shareButton = document.getElementById('share-button');
+if (shareButton && navigator.share) {
+    shareButton.addEventListener('click', async () => {
+        const shareData = {
+            title: 'PJ Losey - Electronics Engineer, Coder, Manager',
+            text: 'Check out my resume - 20+ years of experience across electronics engineering, software development, and racing. Available for remote work and freelance projects.',
+            url: window.location.href
+        };
+        
+        try {
+            await navigator.share(shareData);
+            // Optional: Show success feedback
+            const originalText = shareButton.innerHTML;
+            shareButton.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Shared!';
+            shareButton.classList.add('shared');
+            setTimeout(() => {
+                shareButton.innerHTML = originalText;
+                shareButton.classList.remove('shared');
+            }, 2000);
+        } catch (err) {
+            // User cancelled or share failed - do nothing
+            if (err.name !== 'AbortError') {
+                console.log('Share failed:', err);
+            }
+        }
+    });
+} else if (shareButton) {
+    // Fallback: Copy to clipboard if Web Share API not available
+    shareButton.addEventListener('click', () => {
+        const url = window.location.href;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(() => {
+                const originalText = shareButton.innerHTML;
+                shareButton.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Link Copied!';
+                shareButton.classList.add('shared');
+                setTimeout(() => {
+                    shareButton.innerHTML = originalText;
+                    shareButton.classList.remove('shared');
+                }, 2000);
+            }).catch(() => {
+                // Fallback to opening email
+                window.location.href = `mailto:?subject=Check out this resume&body=Check out this resume: ${url}`;
+            });
+        } else {
+            // Final fallback: open email
+            window.location.href = `mailto:?subject=Check out this resume&body=Check out this resume: ${url}`;
+        }
+    });
+}
+
 // Console easter egg for developers
 console.log('%c👋 Hey there!', 'font-size: 20px; font-weight: bold; color: #00d9ff;');
 console.log('%cWant to see the code? Check out the source!', 'font-size: 14px; color: #a1a1aa;');
