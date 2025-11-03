@@ -1,4 +1,7 @@
-// Typewriter Effect
+/**
+ * Typewriter Effect
+ * Creates an animated typing effect in the hero section
+ */
 const typewriterElement = document.getElementById('typewriter');
 const phrases = [
     'Electronics Engineer',
@@ -14,6 +17,8 @@ let isDeleting = false;
 let typingSpeed = 100;
 
 function typeWriter() {
+    if (!typewriterElement) return;
+    
     const current = phrases[currentPhrase];
     
     if (isDeleting) {
@@ -38,26 +43,28 @@ function typeWriter() {
     setTimeout(typeWriter, typingSpeed);
 }
 
-// Start typewriter effect
+// Start typewriter effect with error handling
 if (typewriterElement) {
     typeWriter();
 }
 
-// Navbar scroll effect
+/**
+ * Navbar Scroll Effect
+ * Adds visual feedback when scrolling past hero section
+ */
 const navbar = document.getElementById('navbar');
-let lastScroll = 0;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-    
-    lastScroll = currentScroll;
-});
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset || window.scrollY;
+        
+        if (currentScroll > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }, { passive: true });
+}
 
 // Mobile menu toggle
 const navToggle = document.getElementById('nav-toggle');
@@ -93,79 +100,111 @@ navLinks.forEach(link => {
     });
 });
 
-// Smooth scroll for anchor links
+/**
+ * Smooth Scroll for Anchor Links
+ * Provides smooth scrolling navigation with offset for fixed navbar
+ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Skip if it's just "#" or empty
+        if (href === '#' || !href) return;
+        
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
             const offsetTop = target.offsetTop - 80;
             window.scrollTo({
-                top: offsetTop,
+                top: Math.max(0, offsetTop),
                 behavior: 'smooth'
             });
         }
     });
 });
 
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
+/**
+ * Intersection Observer for Scroll Animations
+ * Animates elements into view as user scrolls for engaging UX
+ */
+if ('IntersectionObserver' in window) {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                // Unobserve after animation to improve performance
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animateElements = document.querySelectorAll('.timeline-item, .project-card, .skill-item, .highlight-item');
+    animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(el);
     });
-}, observerOptions);
+}
 
-// Observe elements for animation
-const animateElements = document.querySelectorAll('.timeline-item, .project-card, .skill-item, .highlight-item');
-animateElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(el);
-});
-
-// Skill bars animation
+/**
+ * Skill Bars Animation
+ * Animates skill bars filling on scroll into view
+ */
 const skillBars = document.querySelectorAll('.skill-bar');
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const width = entry.target.style.width;
-            entry.target.style.width = '0';
-            setTimeout(() => {
-                entry.target.style.width = width;
-            }, 100);
-            skillObserver.unobserve(entry.target);
-        }
+if (skillBars.length > 0 && 'IntersectionObserver' in window) {
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const width = entry.target.style.width;
+                entry.target.style.width = '0';
+                // Use requestAnimationFrame for smoother animation
+                requestAnimationFrame(() => {
+                    setTimeout(() => {
+                        entry.target.style.width = width;
+                    }, 100);
+                });
+                skillObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    skillBars.forEach(bar => {
+        skillObserver.observe(bar);
     });
-}, { threshold: 0.5 });
+}
 
-skillBars.forEach(bar => {
-    skillObserver.observe(bar);
-});
+/**
+ * Parallax Effect for Hero Background Orbs
+ * Creates depth effect on scroll for visual interest
+ */
+const orbs = document.querySelectorAll('.gradient-orb');
+if (orbs.length > 0) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset || window.scrollY;
+        orbs.forEach((orb, index) => {
+            const speed = 0.5 + (index * 0.1);
+            orb.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+    }, { passive: true });
+}
 
-// Add parallax effect to hero orbs
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const orbs = document.querySelectorAll('.gradient-orb');
-    orbs.forEach((orb, index) => {
-        const speed = 0.5 + (index * 0.1);
-        orb.style.transform = `translateY(${scrolled * speed}px)`;
-    });
-});
-
-// Add active state to nav links based on scroll position
+/**
+ * Active Navigation Highlighting
+ * Highlights current section in navigation based on scroll position
+ */
 const sections = document.querySelectorAll('section[id]');
 
 function highlightNavigation() {
-    const scrollY = window.pageYOffset + 100;
+    if (sections.length === 0 || navLinks.length === 0) return;
+    
+    const scrollY = (window.pageYOffset || window.scrollY) + 100;
     
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
@@ -180,15 +219,20 @@ function highlightNavigation() {
     });
 }
 
-window.addEventListener('scroll', highlightNavigation);
-highlightNavigation(); // Call on load
+if (sections.length > 0) {
+    window.addEventListener('scroll', highlightNavigation, { passive: true });
+    highlightNavigation(); // Call on load
+}
 
-// Copy email to clipboard functionality
+/**
+ * Copy Email to Clipboard
+ * Adds click-to-copy functionality for email links
+ */
 const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
 emailLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         const email = link.href.replace('mailto:', '');
-        if (navigator.clipboard) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
             e.preventDefault();
             navigator.clipboard.writeText(email).then(() => {
                 // Show temporary feedback
@@ -197,13 +241,23 @@ emailLinks.forEach(link => {
                 setTimeout(() => {
                     link.textContent = originalText;
                 }, 2000);
+            }).catch(() => {
+                // Fallback: allow default mailto behavior if clipboard fails
+                window.location.href = `mailto:${email}`;
             });
         }
     });
 });
 
-// Console easter egg
+// Update copyright year dynamically
+const currentYearElement = document.getElementById('current-year');
+if (currentYearElement) {
+    currentYearElement.textContent = new Date().getFullYear();
+}
+
+// Console easter egg for developers
 console.log('%c👋 Hey there!', 'font-size: 20px; font-weight: bold; color: #00d9ff;');
 console.log('%cWant to see the code? Check out the source!', 'font-size: 14px; color: #a1a1aa;');
 console.log('%cLooking for an amazing engineer? You found one! 🚀', 'font-size: 14px; color: #00d9ff;');
+console.log('%cGitHub: https://github.com/loseyco/resume', 'font-size: 12px; color: #71717a;');
 
