@@ -6,7 +6,7 @@ Place your downloaded photos from Google Photos here.
 1. Open: https://photos.app.goo.gl/xchprn5PxKr3D5fn6
 2. Click "More options" → "Download all" or "Save photos"
 3. Extract and copy photos to this folder
-4. Run: `python download_photos.py` (from project root)
+4. Run: `python scripts/download_photos.py` (from project root)
 
 **Supported formats:** JPG, JPEG, PNG, WEBP, GIF
 

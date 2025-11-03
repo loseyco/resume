@@ -29,7 +29,7 @@ Since Google Photos doesn't allow direct programmatic downloads without API setu
 ## After Downloading
 
 Once photos are in the `photos` folder:
-1. Run: `python download_photos.py`
+1. Run: `python scripts/download_photos.py`
 2. This will generate `photo-list.js` with all photo paths
 3. The carousel will automatically detect and display them
 
@@ -40,7 +40,7 @@ Once photos are in the `photos` folder:
 cd C:\Users\pjlos\OneDrive\Projects\Resume
 
 # Run the organizer script
-python download_photos.py
+python scripts/download_photos.py
 ```
 
 The script will:

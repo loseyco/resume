@@ -21,12 +21,15 @@ from pathlib import Path
 
 def organize_photos():
     """Organize photos in the photos folder and generate a list"""
-    photos_dir = Path('photos')
+    # Get the script directory and go up to project root
+    script_dir = Path(__file__).parent
+    project_root = script_dir.parent
+    photos_dir = project_root / 'photos'
     photos_dir.mkdir(exist_ok=True)
     
     # Find all image files (excluding HEIC and videos)
     # Use case-insensitive search to avoid duplicates
-    all_files = glob.glob(str(photos_dir / '*'))
+    all_files = glob.glob(str(photos_dir / '**' / '*'), recursive=True)
     photos = []
     seen = set()
     
@@ -44,27 +47,29 @@ def organize_photos():
     # Sort by filename
     photos.sort()
     
-    # Create a JavaScript file with photo paths
+    # Create a JavaScript file with photo paths in scripts folder
     js_content = "// Auto-generated photo list\n"
     js_content += "// Auto-generated on photo scan - displays photos in random order\n"
     js_content += "const photoFiles = [\n"
     for photo in photos:
-        # Get just the filename (photos are in photos/ folder)
-        photo_name = Path(photo).name
+        # Get relative path from project root
+        photo_path = Path(photo)
+        rel_path = photo_path.relative_to(project_root)
         # Escape quotes in filenames
-        photo_name_escaped = photo_name.replace("'", "\\'").replace('"', '\\"')
-        js_content += f"    'photos/{photo_name_escaped}',\n"
+        rel_path_str = str(rel_path).replace("'", "\\'").replace('"', '\\"')
+        js_content += f"    '{rel_path_str}',\n"
     js_content += "];\n"
     js_content += "\n// Export for use in script.js\n"
     js_content += "if (typeof module !== 'undefined' && module.exports) {\n"
     js_content += "    module.exports = photoFiles;\n"
     js_content += "}\n"
     
-    with open('photo-list.js', 'w') as f:
+    output_path = project_root / 'scripts' / 'photo-list.js'
+    with open(output_path, 'w') as f:
         f.write(js_content)
     
     print(f"Found {len(photos)} photos")
-    print(f"Generated photo-list.js with {len(photos)} photos")
+    print(f"Generated scripts/photo-list.js with {len(photos)} photos")
     return photos
 
 if __name__ == '__main__':

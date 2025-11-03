@@ -383,12 +383,12 @@ async function loadPhotos() {
     }
     
     // No photos found
-    console.log('No photos found - download photos and run download_photos.py');
+    console.log('No photos found - download photos and run scripts/download_photos.py');
     return [];
 }
 
 // Photo URLs - will be populated from photos folder
-// Run download_photos.py after adding photos to generate photo-list.js
+// Run scripts/download_photos.py after adding photos to generate scripts/photo-list.js
 let photoUrls = [];
 
 let currentSlide = 0;
@@ -520,4 +520,5 @@ console.log('%c👋 Hey there!', 'font-size: 20px; font-weight: bold; color: #00
 console.log('%cWant to see the code? Check out the source!', 'font-size: 14px; color: #a1a1aa;');
 console.log('%cLooking for an amazing engineer? You found one! 🚀', 'font-size: 14px; color: #00d9ff;');
 console.log('%cGitHub: https://github.com/loseyco/resume', 'font-size: 12px; color: #71717a;');
+
 
