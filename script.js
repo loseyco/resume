@@ -361,6 +361,132 @@ if (shareButton && navigator.share) {
     });
 }
 
+/**
+ * Photo Resume Carousel
+ * Randomly cycles through photos from Google Photos album
+ */
+const carouselContainer = document.getElementById('carousel-container');
+const carouselIndicators = document.getElementById('carousel-indicators');
+const prevBtn = document.getElementById('carousel-prev');
+const nextBtn = document.getElementById('carousel-next');
+
+// Sample photos - Replace with actual Google Photos URLs or use their embed API
+// For now, using placeholder structure. You'll need to add your actual photo URLs.
+const photoUrls = [
+    // These are placeholder URLs - replace with actual photos from your Google Photos album
+    // You can extract direct image URLs from your Google Photos album
+    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Racing+Photo+1',
+    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Engineering+Photo+2',
+    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Trackside+Photo+3',
+    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Project+Photo+4',
+    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Team+Photo+5',
+    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Work+Photo+6',
+];
+
+let currentSlide = 0;
+let autoPlayInterval = null;
+
+// Shuffle photos for random display
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+const shuffledPhotos = shuffleArray(photoUrls);
+
+function initCarousel() {
+    if (!carouselContainer || shuffledPhotos.length === 0) return;
+    
+    // Clear existing content
+    carouselContainer.innerHTML = '';
+    carouselIndicators.innerHTML = '';
+    
+    // Create slides
+    shuffledPhotos.forEach((url, index) => {
+        const slide = document.createElement('div');
+        slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
+        slide.innerHTML = `<img src="${url}" alt="Photo ${index + 1}" loading="lazy">`;
+        carouselContainer.appendChild(slide);
+        
+        // Create indicator
+        const indicator = document.createElement('button');
+        indicator.className = `carousel-indicator ${index === 0 ? 'active' : ''}`;
+        indicator.setAttribute('aria-label', `Go to slide ${index + 1}`);
+        indicator.addEventListener('click', () => goToSlide(index));
+        carouselIndicators.appendChild(indicator);
+    });
+    
+    // Setup navigation
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+    }
+    
+    // Auto-play carousel (changes every 5 seconds)
+    startAutoPlay();
+}
+
+function goToSlide(index) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    
+    if (slides.length === 0) return;
+    
+    // Wrap around
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    
+    // Update active slide
+    slides[currentSlide].classList.remove('active');
+    indicators[currentSlide].classList.remove('active');
+    
+    currentSlide = index;
+    
+    slides[currentSlide].classList.add('active');
+    indicators[currentSlide].classList.add('active');
+    
+    // Reset auto-play
+    startAutoPlay();
+}
+
+function startAutoPlay() {
+    if (autoPlayInterval) {
+        clearInterval(autoPlayInterval);
+    }
+    
+    autoPlayInterval = setInterval(() => {
+        goToSlide(currentSlide + 1);
+    }, 5000);
+}
+
+// Pause auto-play on hover
+const photoCarousel = document.getElementById('photo-carousel');
+if (photoCarousel) {
+    photoCarousel.addEventListener('mouseenter', () => {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+        }
+    });
+    
+    photoCarousel.addEventListener('mouseleave', () => {
+        startAutoPlay();
+    });
+}
+
+// Initialize carousel when page loads
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousel);
+} else {
+    initCarousel();
+}
+
 // Console easter egg for developers
 console.log('%c👋 Hey there!', 'font-size: 20px; font-weight: bold; color: #00d9ff;');
 console.log('%cWant to see the code? Check out the source!', 'font-size: 14px; color: #a1a1aa;');
