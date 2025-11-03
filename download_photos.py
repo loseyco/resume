@@ -24,24 +24,36 @@ def organize_photos():
     photos_dir = Path('photos')
     photos_dir.mkdir(exist_ok=True)
     
-    # Find all image files
-    image_extensions = ['*.jpg', '*.jpeg', '*.png', '*.webp', '*.gif']
+    # Find all image files (excluding HEIC and videos)
+    # Use case-insensitive search to avoid duplicates
+    all_files = glob.glob(str(photos_dir / '*'))
     photos = []
+    seen = set()
     
-    for ext in image_extensions:
-        photos.extend(glob.glob(str(photos_dir / ext)))
-        photos.extend(glob.glob(str(photos_dir / ext.upper())))
+    for file_path in all_files:
+        file_lower = file_path.lower()
+        # Check if it's an image (not HEIC, videos, or DNG)
+        if (file_lower.endswith(('.jpg', '.jpeg', '.png', '.webp', '.gif')) and 
+            not file_lower.endswith(('.heic', '.mp4', '.mov', '.dng'))):
+            # Use absolute path for uniqueness check
+            abs_path = os.path.abspath(file_path)
+            if abs_path not in seen:
+                seen.add(abs_path)
+                photos.append(file_path)
     
     # Sort by filename
     photos.sort()
     
     # Create a JavaScript file with photo paths
     js_content = "// Auto-generated photo list\n"
+    js_content += "// Auto-generated on photo scan - displays photos in random order\n"
     js_content += "const photoFiles = [\n"
     for photo in photos:
-        # Get relative path from project root
-        rel_path = str(Path(photo).relative_to(Path.cwd())).replace('\\', '/')
-        js_content += f"    'photos/{Path(photo).name}',\n"
+        # Get just the filename (photos are in photos/ folder)
+        photo_name = Path(photo).name
+        # Escape quotes in filenames
+        photo_name_escaped = photo_name.replace("'", "\\'").replace('"', '\\"')
+        js_content += f"    'photos/{photo_name_escaped}',\n"
     js_content += "];\n"
     js_content += "\n// Export for use in script.js\n"
     js_content += "if (typeof module !== 'undefined' && module.exports) {\n"
