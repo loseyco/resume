@@ -363,25 +363,36 @@ if (shareButton && navigator.share) {
 
 /**
  * Photo Resume Carousel
- * Randomly cycles through photos from Google Photos album
+ * Randomly cycles through photos from local photos folder
  */
 const carouselContainer = document.getElementById('carousel-container');
 const carouselIndicators = document.getElementById('carousel-indicators');
 const prevBtn = document.getElementById('carousel-prev');
 const nextBtn = document.getElementById('carousel-next');
 
-// Sample photos - Replace with actual Google Photos URLs or use their embed API
-// For now, using placeholder structure. You'll need to add your actual photo URLs.
-const photoUrls = [
-    // These are placeholder URLs - replace with actual photos from your Google Photos album
-    // You can extract direct image URLs from your Google Photos album
-    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Racing+Photo+1',
-    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Engineering+Photo+2',
-    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Trackside+Photo+3',
-    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Project+Photo+4',
-    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Team+Photo+5',
-    'https://via.placeholder.com/1600x900/00d9ff/ffffff?text=Work+Photo+6',
-];
+// Load photos from local folder - dynamically generated
+// Photos will be loaded from the photos/ folder
+async function loadPhotos() {
+    // Try to load from generated photo-list.js if it exists
+    if (typeof photoFiles !== 'undefined' && photoFiles.length > 0) {
+        return photoFiles;
+    }
+    
+    // Fallback: try to fetch a list of photos from the server
+    // This requires the photos to be accessible via HTTP
+    try {
+        // If you have a server that can list files, use this approach
+        // For now, return empty and show placeholder
+        return [];
+    } catch (error) {
+        console.log('Photo list not found - photos need to be downloaded');
+        return [];
+    }
+}
+
+// Photo URLs - will be populated from photos folder
+// Run download_photos.py after adding photos to generate photo-list.js
+let photoUrls = [];
 
 let currentSlide = 0;
 let autoPlayInterval = null;
@@ -396,10 +407,30 @@ function shuffleArray(array) {
     return shuffled;
 }
 
-const shuffledPhotos = shuffleArray(photoUrls);
+// Load photos and initialize carousel
+async function initializePhotoCarousel() {
+    photoUrls = await loadPhotos();
+    
+    // If no photos found, show placeholder message
+    if (photoUrls.length === 0) {
+        if (carouselContainer) {
+            carouselContainer.innerHTML = `
+                <div style="display: flex; align-items: center; justify-content: center; height: 100%; flex-direction: column; padding: 2rem; text-align: center; color: var(--text-secondary);">
+                    <p style="margin-bottom: 1rem;">Photos will appear here once downloaded.</p>
+                    <p style="font-size: 0.875rem;">See PHOTO_DOWNLOAD_INSTRUCTIONS.md for setup.</p>
+                    <a href="https://photos.app.goo.gl/xchprn5PxKr3D5fn6" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 1rem;">View Photo Album</a>
+                </div>
+            `;
+        }
+        return;
+    }
+    
+    const shuffledPhotos = shuffleArray(photoUrls);
+    initCarousel(shuffledPhotos);
+}
 
-function initCarousel() {
-    if (!carouselContainer || shuffledPhotos.length === 0) return;
+function initCarousel(shuffledPhotos) {
+    if (!carouselContainer || !shuffledPhotos || shuffledPhotos.length === 0) return;
     
     // Clear existing content
     carouselContainer.innerHTML = '';
@@ -482,9 +513,9 @@ if (photoCarousel) {
 
 // Initialize carousel when page loads
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCarousel);
+    document.addEventListener('DOMContentLoaded', initializePhotoCarousel);
 } else {
-    initCarousel();
+    initializePhotoCarousel();
 }
 
 // Console easter egg for developers

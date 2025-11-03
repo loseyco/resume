@@ -33,3 +33,7 @@ node_modules/
 *.pdf
 !PJ_Losey_Resume.pdf
 
+# Photos folder (optional - uncomment to ignore photos in git)
+# photos/
+# photo-list.js
+

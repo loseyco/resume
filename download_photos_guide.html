@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Photos Helper</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .step {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #00d9ff;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #00d9ff;
+        }
+        code {
+            background: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .button {
+            display: inline-block;
+            background: #00d9ff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 10px 5px;
+            font-weight: 600;
+        }
+        .button:hover {
+            background: #00b8d4;
+        }
+    </style>
+</head>
+<body>
+    <h1>📸 Download Photos for Resume Carousel</h1>
+    
+    <div class="step">
+        <h3>Step 1: Open Your Google Photos Album</h3>
+        <p>Click the button below to open your album:</p>
+        <a href="https://photos.app.goo.gl/xchprn5PxKr3D5fn6" target="_blank" class="button">Open Photo Album</a>
+    </div>
+    
+    <div class="step">
+        <h3>Step 2: Download All Photos</h3>
+        <p><strong>Easiest Method:</strong></p>
+        <ol>
+            <li>In Google Photos, click the three-dot menu (⋮) in the top right</li>
+            <li>Select "Download all" or "Save photos"</li>
+            <li>Wait for the ZIP file to download</li>
+            <li>Extract the ZIP file</li>
+            <li>Copy all photos to: <code>C:\Users\pjlos\OneDrive\Projects\Resume\photos\</code></li>
+        </ol>
+    </div>
+    
+    <div class="step">
+        <h3>Step 3: Generate Photo List</h3>
+        <p>After copying photos to the <code>photos</code> folder, run this command in PowerShell:</p>
+        <code style="display: block; padding: 15px; background: #2d2d2d; color: #fff; margin: 10px 0;">
+            cd C:\Users\pjlos\OneDrive\Projects\Resume<br>
+            python download_photos.py
+        </code>
+        <p>This will generate <code>photo-list.js</code> with all your photo paths.</p>
+    </div>
+    
+    <div class="step">
+        <h3>Step 4: Refresh Your Website</h3>
+        <p>The carousel will automatically detect and display all photos in random order!</p>
+    </div>
+    
+    <div class="step">
+        <h3>💡 Tips</h3>
+        <ul>
+            <li>Photos will be randomly shuffled each time the page loads</li>
+            <li>Supported formats: JPG, JPEG, PNG, WEBP, GIF</li>
+            <li>Keep original filenames or use descriptive names like: <code>indy-500.jpg</code>, <code>proton-accelerator.jpg</code></li>
+            <li>Photos are displayed in a 16:9 aspect ratio carousel</li>
+        </ul>
+    </div>
+</body>
+</html>
+
