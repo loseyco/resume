@@ -103,7 +103,33 @@ Resume: https://pjlosey.com
 
 ---
 
+## Post Option 4: DAG & Strategy Focus
+
+Looking for new opportunities in racing - DAG positions and getting back into strategy calling.
+
+Current: Trackside Engineer for Honda Racing Corporation (IndyCar). Indy 500 Winner, 2x Manufacturer Championships.
+
+Experience:
+- IMSA, SRO World Challenge, NASA, IndyCar - strategy, data, team management
+- Cameron Racing: Data Engineer & Race Strategist - developed and called race strategies for SRO and IMSA
+- Davidson Racing: Team Manager - fleet, logistics, operations
+- Rearden Racing: Car Chief
+
+Location: Monmouth, IL, USA
+Fly-Out: MLI, PIA, or ORD
+Open to: USA, Canada, Mexico, international - available for fly-in work
+
+20+ years in electronics, software, IT, team management.
+
+Interested in: DAG positions, strategy calling, data engineering, race strategy, trackside engineering.
+
+Resume: https://pjlosey.com
+
+#OpenToWork #RacingJobs #Engineering #Motorsports #DAG #RaceStrategy #StrategyCalling #DataEngineering #IndyCar #IMSA #SRO
+
+---
+
 ## Recommended Approach
 
-**Option 1** is probably best - detailed enough to show your full experience while including all the location and travel information Bob requested. It's professional for the group while showing your passion for racing.
+**Option 4** focuses specifically on DAG positions and strategy calling, which aligns with current interests. **Option 1** is also good if you want a more general post - detailed enough to show your full experience while including all the location and travel information.
 

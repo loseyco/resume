@@ -14,3 +14,4 @@ This folder contains all documentation and guides for the resume website project
 - **RESUME.md** - Main resume in Markdown format
 - **RESUME_HTML.html** - HTML version of resume for PDF generation
 
+
