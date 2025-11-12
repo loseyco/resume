@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monarch Defender Visit Playbook | PJ Losey</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #ffffff;
+            --card: #ffffff;
+            --accent: #c7a038;
+            --accent-light: #ddc26a;
+            --text: #1a1a1a;
+            --muted: #6f6a5d;
+            --border: #f2efe6;
+            --trim: #1f1f1f;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: center;
+            padding: 12px 24px;
+        }
+        
+        .top-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+        .top-nav a {
+            color: var(--trim);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+        .top-nav a:hover,
+        .top-nav a:focus {
+            border-color: rgba(199,160,56,0.3);
+            background: rgba(199,160,56,0.12);
+            color: var(--trim);
+        }
+        @media (max-width: 720px) {
+            .top-nav {
+                padding: 10px 12px;
+            }
+            .top-nav a {
+                font-size: 0.85rem;
+            }
+        }
+        header {
+            padding: 48px 24px 32px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--accent);
+        }
+        header p {
+            margin: 0 auto;
+            max-width: 780px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+            display: grid;
+            gap: 28px;
+        }
+        section {
+            background: var(--card);
+            border-radius: 18px;
+            padding: 28px 32px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: var(--accent);
+            letter-spacing: 0.02em;
+        }
+        h3 {
+            margin-top: 24px;
+            font-size: 1.15rem;
+            color: var(--accent-light);
+        }
+        p {
+            margin: 0 0 16px;
+        }
+        ul {
+            margin: 12px 0 16px 22px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .tag-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .tag {
+            background: rgba(199,160,56,0.08);
+            color: var(--accent);
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(199,160,56,0.18);
+        }
+        
+        .grid-two {
+            display: grid;
+            gap: 22px;
+        }
+        @media (min-width: 900px) {
+            .grid-two {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        .callout {
+            border-left: 4px solid var(--accent);
+            padding: 14px 18px;
+            background: rgba(199,160,56,0.08);
+            border-radius: 12px;
+            margin: 18px 0;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0 0;
+        }
+        .pill {
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(199,160,56,0.1);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        
+        .timeline {
+            border-left: 3px solid var(--border);
+            padding-left: 16px;
+            margin-left: 6px;
+        }
+        .timeline-item {
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -26px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 999px;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px var(--bg);
+        }
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .resources a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin: 6px 12px 0 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 18px;
+        }
+        .gallery figure {
+            margin: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            background: var(--card);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+        }
+        .gallery img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+        .gallery figcaption {
+            display: none;
+        }
+        .album-note {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: min(90%, 1100px);
+            max-height: 90vh;
+            border-radius: 12px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+        }
+        .mockup-grid {
+            display: grid;
+            gap: 22px;
+        }
+        @media (min-width: 900px) {
+            .mockup-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        .mockup-card {
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--card);
+            padding: 18px 20px;
+            min-height: 100%;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+        }
+        .mockup-card h3 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+        .mockup-card ul {
+            margin: 10px 0 0 18px;
+        }
+        .link-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .link-buttons a {
+            padding: 10px 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(195,155,58,0.4);
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            background: rgba(195,155,58,0.1);
+        }
+        .link-buttons a:hover {
+            background: rgba(195,155,58,0.2);
+        }
+        
+        .dashboard-preview {
+            margin-top: 24px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--card);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+        }
+        .preview-shell {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            min-height: 420px;
+        }
+        @media (max-width: 800px) {
+            .preview-shell {
+                grid-template-columns: 1fr;
+            }
+        }
+        .preview-sidebar {
+            background: #faf7ef;
+            padding: 22px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            color: var(--trim);
+            border-right: 1px solid var(--border);
+        }
+        
+        .preview-sidebar h4 {
+            margin: 0;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+        .preview-sidebar ul {
+            margin: 0;
+            padding-left: 16px;
+            font-size: 0.9rem;
+        }
+        .preview-main {
+            background: var(--card);
+            padding: 22px 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .preview-topbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .preview-kpi {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        }
+        .preview-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+            background: var(--card);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+        }
+        .preview-card h5 {
+            margin: 0 0 6px;
+            font-size: 0.95rem;
+            color: var(--accent);
+        }
+        .preview-table {
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .preview-table table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .preview-table th,
+        .preview-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .preview-table th {
+            text-align: left;
+            background: #f9f6ee;
+            letter-spacing: 0.02em;
+            font-weight: 600;
+            color: var(--trim);
+        }
+        .status-pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(199,160,56,0.1);
+            color: var(--trim);
+            border: 1px solid rgba(199,160,56,0.22);
+        }
+        .status-pill.alert {
+            background: rgba(215, 76, 38, 0.15);
+            color: #d74c26;
+        }
+        .status-pill.ready {
+            background: rgba(16, 185, 129, 0.18);
+            color: #069669;
+        }
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+        .tab-pill {
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(199,160,56,0.24);
+            color: var(--trim);
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: #fbf7ec;
+        }
+        .tab-pill.active {
+            background: rgba(199,160,56,0.18);
+            border-color: rgba(199,160,56,0.32);
+            color: var(--trim);
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="#quick-links">Quick Links</a></li>
+            <li><a href="#about-pj">About Me</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#monarch-overview">Monarch Overview</a></li>
+            <li><a href="#responsibilities">Role Fit</a></li>
+            <li><a href="#conversation">Conversation Plan</a></li>
+            <li><a href="#photo-album">Photos</a></li>
+            <li><a href="#mockup">Shop Dashboard</a></li>
+            <li><a href="#mockup-preview">Dashboard Preview</a></li>
+            <li><a href="#study">Study Sprint</a></li>
+            <li><a href="#logistics">Logistics</a></li>
+            <li><a href="#resources">References</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Monarch Defender Visit Playbook</h1>
+        <p>Prep hub for the onsite meeting in Grayslake, Illinois. Use this page to stay fluent in Monarch Defender’s story, connect it to your experience, keep questions sharp, and manage the travel logistics for tomorrow’s shop tour.</p>
+    </header>
+    <main>
+        <section id="quick-links">
+            <h2>Quick Links & Documents</h2>
+            <p>Everything I might need at the shop—even if the Wi‑Fi drops. All files are stored locally with this page so they work offline on the iPad.</p>
+            <div class="link-buttons">
+                <a href="../../PJ_Losey_Resume.pdf" target="_blank" rel="noopener">Master Resume (PDF)</a>
+                <a href="resume.html" target="_blank" rel="noopener">Monarch Resume (HTML)</a>
+                <a href="PJ Losey - Shop Manager Resume - Monarch Defender.pdf" target="_blank" rel="noopener">Monarch Resume (PDF)</a>
+                <a href="cover_letter.html" target="_blank" rel="noopener">Cover Letter (HTML)</a>
+                <a href="PJ_Losey_Cover_Letter_Monarch_Defender.pdf" target="_blank" rel="noopener">Cover Letter (PDF)</a>
+                <a href="analysis.md" target="_blank" rel="noopener">Application Analysis Notes</a>
+                <a href="Monarch Defender LLC – Company Research.pdf" target="_blank" rel="noopener">Company Research PDF</a>
+                <a href="../../photos" target="_blank" rel="noopener">Photo Library Folder</a>
+            </div>
+            <div class="callout">
+                Download tip: in Safari on iPad, add this page to Reading List or “Add to Home Screen” to cache everything. If you open any linked PDF once, it stays available offline.
+            </div>
+        </section>
+
+        <section id="about-pj">
+            <h2>About PJ – Talking Points</h2>
+            <div class="grid-two">
+                <div>
+                    <h3>Snapshot</h3>
+                    <ul>
+                        <li>IndyCar Trackside Engineer with Honda—Indy 500 winner, 2× Manufacturer Championships.</li>
+                        <li>Former Davidson Racing Team Manager overseeing multi-million-dollar collector fleet (La Ferrari, P1, Senna) plus race programs.</li>
+                        <li>Electronics engineer: wiring harness design, ECU/PDM programming, diagnostics, custom tooling.</li>
+                        <li>Hands-on leader: comfortable on the floor solving problems, mentoring techs, and enforcing QC.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Angle for Monarch</h3>
+                    <ul>
+                        <li>Proven at managing simultaneous bespoke builds with zero tolerance for quality slips.</li>
+                        <li>Brings motorsport execution speed + collector-car preservation mindset—aligns with their “heritage + innovation” mission.</li>
+                        <li>Vendor and client-facing experience with HNW individuals; can translate technical updates into luxury service language.</li>
+                        <li>Software/IT background provides edge for shop tooling, inventory dashboards, and EV/electronics documentation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Deep Dive</h2>
+            <div class="grid-two">
+                <div>
+                    <h3>Company Insights</h3>
+                    <ul>
+                        <li>Boutique operation (~15 master craftsmen) delivering 150+ bespoke Defenders worldwide; flagship Grayslake facility with Ames expansion and Bursa logistics hub.</li>
+                        <li>Brand statement: “Fit for a King/Queen – the world is yours” — restorations framed as automotive art pieces.</li>
+                        <li>EV partnership with BEDEO (2025) makes them first to launch in-wheel motor Defender conversions; highlights engineering ambition.</li>
+                        <li>Client engagement is highly collaborative; build stories (Nomad EV, Project 24, Gulf Runner) used as marketing torchbearers.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Culture & Expectations</h3>
+                    <ul>
+                        <li>Master craftsmanship: bolt-by-bolt rebuilds, 500+ labor hours per vehicle, no shortcuts.</li>
+                        <li>Innovation within heritage: integrate modern drivetrains/electronics without losing Defender soul.</li>
+                        <li>Quality control obsession: brand reputation hinges on flawless fit, finish, and delivery experience.</li>
+                        <li>Growth mindset: rapid expansion means processes, training, and cross-site coordination are evolving—room to lead.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="callout">
+                Use these bullets to compliment specific builds during the tour (“I saw how Project 24…”) and to ask follow-ups about EV readiness, cross-location workflow, and QC sign-offs.
+            </div>
+        </section>
+
+        <section id="monarch-overview">
+            <h2>Company Snapshot</h2>
+            <p>Monarch Defender LLC rebuilds classic Land Rover Defenders into bespoke luxury machines for collectors who want heritage with modern reliability. Boutique size, big reputation, and a growing footprint across Illinois, Iowa, and Turkey.</p>
+            <div class="grid-two">
+                <div>
+                    <h3>Essentials</h3>
+                    <ul>
+                        <li><strong>HQ & footprint:</strong> Chicagoland flagship (Grayslake) with expansion to Ames, IA, and strategic partners in Bursa, Turkey for global logistics.</li>
+                        <li><strong>Specialty:</strong> Ground-up Defender restorations with modern drivetrains (LS3/LT1 V8, EV), bespoke interiors, and curated accessories.</li>
+                        <li><strong>Scale:</strong> ~15 master craftsmen, 150+ Defenders delivered; projects priced mid-six figures.</li>
+                        <li><strong>Clients:</strong> Enthusiasts and collectors worldwide seeking one-off builds and white-glove service.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Brand & Positioning</h3>
+                    <ul>
+                        <li>Luxury atelier mindset: “Fit for a King/Queen – the world is yours.”</li>
+                        <li>Emphasis on master craftsmanship, innovation, and client collaboration.</li>
+                        <li>Shop culture: detail-obsessed, hands-on leadership, safety- and quality-first workspace.</li>
+                        <li>Growth mode: new locations, EV innovation, more complex custom requests.</li>
+                    </ul>
+                    <div class="tag-grid">
+                        <span class="tag">Luxury Restomod</span>
+                        <span class="tag">Client Partnership</span>
+                        <span class="tag">Global Logistics</span>
+                        <span class="tag">EV Innovation</span>
+                        <span class="tag">Bespoke Craft</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="build-highlights">
+            <h2>Craftsmanship & Signature Builds</h2>
+            <div class="grid-two">
+                <div>
+                    <h3>Mechanical Core</h3>
+                    <ul>
+                        <li>GM LS3/LT1 V8 swaps with modern 6-speed automatics, upgraded axles, Fox suspension, Wilwood brakes.</li>
+                        <li>Custom wiring looms, ECU integration, and modern electronics concealed within vintage aesthetics.</li>
+                        <li>Chassis stripped, coated, and reassembled to show-quality standards with expedition-ready options.</li>
+                    </ul>
+                    <h3>Interior Craft</h3>
+                    <ul>
+                        <li>Nappa leather, contrast stitching, teak flooring, premium audio, CarPlay, heated seats, wireless charging.</li>
+                        <li>Each cabin bespoke to client vision—“every stitch tells a story.”</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Flagship Projects to Reference</h3>
+                    <ul>
+                        <li><strong>Project 24:</strong> LS3 soft-top 110, Fox suspension, modern drivetrain—perfect example of performance + heritage.</li>
+                        <li><strong>Gulf Runner:</strong> Iconic Gulf livery, motorsport nostalgia meets off-road capability.</li>
+                        <li><strong>Rugido:</strong> $300k+ 110 with bold theme; highlights naming convention and storytelling.</li>
+                        <li><strong>The Goat:</strong> 6.2L LT1 (~460 hp) with Wilwood brakes—great segue to discuss QC and drivetrain upgrades.</li>
+                    </ul>
+                    <div class="callout">
+                        Tie these builds to your race-shop experience (engine swaps, harnesses, QC). Use specific details so it feels conversational, not scripted.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="innovation">
+            <h2>Innovation Pulse</h2>
+            <p>Monarch isn’t just modernizing classics—they’re helping define what the next decade of luxury 4x4 restomods looks like.</p>
+            <ul>
+                <li><strong>BEDEO Partnership (2025):</strong> Integrating in-wheel motors for the “Nomad EV” Defender—500 HP with in-wheel electric drive, roughly 220-mile range, retains full 4WD capability.</li>
+                <li><strong>Zero-emission restomods:</strong> First to adopt IWM tech in a Defender; chassis remains unaltered, weight parity maintained.</li>
+                <li><strong>Why it matters:</strong> Opens conversations about electrical engineering complexity, QC, and client education—areas you can lead.</li>
+            </ul>
+            <div class="pill-list">
+                <span class="pill">Ask about EV pipeline</span>
+                <span class="pill">Highlight wiring/ECU chops</span>
+                <span class="pill">Discuss change-management</span>
+            </div>
+        </section>
+
+        <section id="responsibilities">
+            <h2>Role & Responsibilities Alignment</h2>
+            <div class="grid-two">
+                <div>
+                    <h3>What Monarch Needs</h3>
+                    <ul>
+                        <li>Oversee workshop operations from tear-down through final inspection.</li>
+                        <li>Plan project timelines, technician schedules, and production priorities.</li>
+                        <li>Guard Monarch’s quality bar—fit, finish, drivability, delivery experience.</li>
+                        <li>Own parts procurement, vendor management, and inventory visibility.</li>
+                        <li>Lead and motivate master craftsmen while upholding a safe, organized shop.</li>
+                        <li>Partner with design/engineering/leadership to hit milestones and manage client expectations.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>How I’ll Answer</h3>
+                    <ul>
+                        <li>Ran simultaneous race and restoration builds—daily stand-ups, Kanban boards, and QC checklists ensured zero misses.</li>
+                        <li>Experience scheduling 50+ crew members across shifts for 24h endurance races—translates to balancing craftsmen workloads.</li>
+                        <li>Implemented torque/inspection sign-off sheets and harness validation at Davidson & Rearden; will adapt for Defender QC.</li>
+                        <li>Long track record sourcing rare components, managing suppliers, and keeping burn rate on budget.</li>
+                        <li>Hands-on leader respected by technicians; I jump in with tools, mentor apprentices, and keep the floor spotless.</li>
+                        <li>Cross-functional communicator accustomed to aligning engineers, owners, and collectors with transparent updates.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="callout">
+                Bring printed resume + cover letter, but also be ready to walk through one STAR story for each responsibility above.
+            </div>
+        </section>
+
+        <section id="conversation">
+            <h2>Conversation Playbook</h2>
+            <div class="grid-two">
+                <div>
+                    <h3>Your Jump-Off Intro</h3>
+                    <p>“I’ve spent the last decade leading high-stakes race and restoration programs—LS swaps, custom harnesses, multi-shop coordination. I’m excited to bring that same obsessive detail to Monarch’s bespoke builds while helping the team scale comfortably between Grayslake, Ames, and overseas partners.”</p>
+                    <h3>Key Talking Points</h3>
+                    <ul>
+                        <li>Track record running simultaneous builds with zero QC misses.</li>
+                        <li>Electronics expertise to de-risk modern tech integrations and EV transitions.</li>
+                        <li>Client-facing experience with high-net-worth collectors; tailoring updates, managing expectations.</li>
+                        <li>Process improvements: scheduling, inventory, software tooling (highlight ability to build custom dashboards if needed).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Questions to Ask</h3>
+                    <ul>
+                        <li>“How do you split production between Grayslake, Ames, and Bursa today? Where do you see the biggest coordination friction?”</li>
+                        <li>“What’s the current QC checklist for drivetrain swaps and EV conversions, and where could we add data capture or sign-off steps?”</li>
+                        <li>“How are clients looped in through the build? Would a more structured milestone review help reduce change-orders?”</li>
+                        <li>“As you scale, what mix of shop-floor leadership and customer-facing time do you want this role to carry?”</li>
+                    </ul>
+                    <div class="callout">
+                        Goal: sound curious, informed, and ready to dive in. Let them feel you’re already picturing yourself on their floor.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="alignment">
+            <h2>Alignment Map</h2>
+            <div class="grid-two">
+                <div>
+                    <h3>Monarch Needs</h3>
+                    <ul>
+                        <li>Lead & motivate master craftsmen.</li>
+                        <li>Manage bespoke build pipeline & QC.</li>
+                        <li>Oversee parts procurement and vendor network.</li>
+                        <li>Champion safety, organization, and client satisfaction.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Your Proof Points</h3>
+                    <ul>
+                        <li>Led 50+ person race crews; managed multi-million collector fleet (La Ferrari, P1, Senna).</li>
+                        <li>Hands-on with engine swaps, wiring harnesses, ECU/PDM integration, custom fabrication.</li>
+                        <li>Vendor coordination across race series and restoration projects; zero supply-chain surprises.</li>
+                        <li>Built IT and software tooling, documented processes, enforced safety in high-pressure environments.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pill-list">
+                <span class="pill">Team Leadership</span>
+                <span class="pill">Quality Control</span>
+                <span class="pill">Collector Car Cred</span>
+                <span class="pill">Process + Tech</span>
+            </div>
+        </section>
+
+        <section id="study">
+            <h2>Study Sprint Tonight</h2>
+            <ul>
+                <li>Land Rover Defender history: Series III → Defender 90/110 → NAS editions → 2020 L663 redesign.</li>
+                <li>LS/LT swap fundamentals: cooling, driveline reinforcement, brake upgrades, emission considerations.</li>
+                <li>Review Monarch builds: Project 24, Gulf Runner, Rugido, The Goat (note unique customer stories).</li>
+                <li>EV partnership: BEDEO in-wheel motor advantages, client education points, service implications.</li>
+                <li>Prepare 2–3 STAR stories (shop turnaround, vendor rescue, wiring/fire drill fix).</li>
+            </ul>
+            <h3>Study Materials</h3>
+            <ul>
+                <li><a href="https://monarchdefender.com/about-us/" target="_blank" rel="noopener">Monarch Defender – About & History</a> (Concept, History, Worldwide Growth)</li>
+                <li><a href="https://monarchdefender.com/projects/" target="_blank" rel="noopener">Project Gallery</a> (Nomad EV, Gulf Runner, Dream Weaver specs)</li>
+                <li><a href="https://theevreport.com/luxury-electric-classic-defenders-arrive" target="_blank" rel="noopener">BEDEO In-Wheel Motor Partnership Overview</a></li>
+                <li><a href="https://media.landrover.com/news/2020/06/new-land-rover-defender-history" target="_blank" rel="noopener">Land Rover Defender Timeline</a></li>
+                <li><a href="https://www.hotrod.com/articles/ls3-engine-facts/" target="_blank" rel="noopener">LS3 Platform Reference</a> (power, cooling, support components)</li>
+                <li><a href="https://wilwood.com/BrakeKits" target="_blank" rel="noopener">Wilwood Brake Kit Catalog</a> (talk specifics on upgrade packages)</li>
+            </ul>
+        </section>
+
+        <section id="onsite-checklist">
+            <h2>On-Site Checklist & Key Questions</h2>
+            <div class="grid-two">
+                <div>
+                    <h3>Observe & Note</h3>
+                    <ul>
+                        <li>Shop flow: how builds are staged from tear-down through final detail; any bottlenecks visible.</li>
+                        <li>Tooling & equipment: lifts, fabrication stations, paint prep, wiring benches—capture photos for follow-up ideas.</li>
+                        <li>Inventory areas: how they organize LS3/LT1 components, upholstery, BEDEO hardware, fasteners.</li>
+                        <li>QC documentation: torque boards, sign-off sheets, delivery checklists—ask to see current templates.</li>
+                        <li>Safety & cleanliness: note PPE usage, housekeeping standards, waste oil handling.</li>
+                        <li>Client experience: lounge or delivery bay setup, photographic backdrops, scent/music touches.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Questions to Cover</h3>
+                    <ul>
+                        <li>Role logistics: start date expectations, probation period, hourly vs salary, overtime/on-call policy.</li>
+                        <li>Schedule: standard shop hours, weekend rotations, blackout dates (events or deliveries).</li>
+                        <li>Travel: site visits to Ames/Bursa, customer home deliveries, shows/events—frequency and duration.</li>
+                        <li>Team structure: reporting lines, number of technicians per build, support roles (procurement, design).</li>
+                        <li>Process maturity: current software/tools for project tracking, parts, timekeeping—what’s working/what’s pain.</li>
+                        <li>Success metrics: how they measure shop manager performance—delivery time, QA score, client satisfaction.</li>
+                        <li>Next steps: decision timeline, background check or reference requirements, who to follow up with.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="mockup">
+            <h2>Shop Dashboard Mockup Ideas</h2>
+            <p>Storyboard for an HTML-based dashboard I can mock up after the visit. Helps articulate how I’d visualize Monarch’s builds, people, and parts without needing enterprise software on day one.</p>
+            <div class="mockup-grid">
+                <div class="mockup-card">
+                    <h3>1. Operations Overview</h3>
+                    <ul>
+                        <li><strong>Active Builds Grid:</strong> Cards for each Defender with progress bars (tear-down → chassis → drivetrain → interior → QA → delivery).</li>
+                        <li><strong>Schedule Heatmap:</strong> Technician coverage by day/shift highlighting bottlenecks and overtime risk.</li>
+                        <li><strong>Milestone Alerts:</strong> Automated reminders for client walkthroughs, paint cure dates, road-test deadlines.</li>
+                    </ul>
+                </div>
+                <div class="mockup-card">
+                    <h3>2. Parts & Procurement</h3>
+                    <ul>
+                        <li><strong>Inventory Snapshot:</strong> LS/LT engines, Fox suspension kits, Wilwood brake sets, upholstery hides, BEDEO components—counts and reorder points.</li>
+                        <li><strong>Vendor Tracker:</strong> Status of open POs, lead times, tracking info for critical shipments.</li>
+                        <li><strong>Custom Fab Queue:</strong> CNC brackets, bespoke stitch patterns, powder coat batches awaiting completion.</li>
+                    </ul>
+                </div>
+                <div class="mockup-card">
+                    <h3>3. Labor & Hours</h3>
+                    <ul>
+                        <li><strong>Timesheet Rollup:</strong> Daily hours per tech tied to specific build phases for accurate job costing.</li>
+                        <li><strong>Skill Matrix:</strong> Quick reference for who is cleared for engine swaps, wiring, interior trim, final QA.</li>
+                        <li><strong>Training & Safety:</strong> Upcoming OSHA refreshers, tool calibration checks, process training assignments.</li>
+                    </ul>
+                </div>
+                <div class="mockup-card">
+                    <h3>4. Client & Quality Hub</h3>
+                    <ul>
+                        <li><strong>Client Portal Summary:</strong> Next touchpoint, outstanding decisions, payment milestones.</li>
+                        <li><strong>Build Logs:</strong> Photo uploads, torque sheet sign-offs, wiring diagrams, QA checklists accessible per vehicle.</li>
+                        <li><strong>Issue Tracker:</strong> Paint imperfections, delayed parts, scope changes—flagged with owner and mitigation plan.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="callout">
+                Conversation hook: mention this concept while touring the shop—shows how I’ll bring structure quickly, even with lightweight tools. Offer to send a clickable mockup as a follow-up.
+            </div>
+        </section>
+
+        <section id="logistics">
+            <h2>Trip Logistics</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>Tonight</strong><br>
+                    Pack shop attire (collared shirt, dark jeans/chinos, clean boots), safety glasses, resume copies, notebook, chargers.
+                </div>
+                <div class="timeline-item">
+                    <strong>Morning</strong><br>
+                    Load the Jeep with gear and dogs; depart Monmouth directly for Grayslake (plan rest stop midway).
+                </div>
+                <div class="timeline-item">
+                    <strong>Midday</strong><br>
+                    Arrive 10–15 min early at the Grayslake shop; park in shaded spot so dogs stay comfortable in the Jeep.
+                </div>
+                <div class="timeline-item">
+                    <strong>Stay</strong><br>
+                    Plan for at least one overnight near Grayslake; scout dog-friendly lodging and secure late check-in.
+                </div>
+                <div class="timeline-item">
+                    <strong>Vehicle Prep</strong><br>
+                    Fuel up, tire check, print/digitally save route, queue playlist/podcast, pack snacks and water.
+                </div>
+            </div>
+        </section>
+
+        <section id="checklist">
+            <h2>Active Checklist</h2>
+            <ul>
+                <li>☑ Digest Monarch research & pull talking points (keep refining with this page).</li>
+                <li>⬜ Sync resume bullets & STAR stories with Monarch’s requirements.</li>
+                <li>⬜ Finalize travel plan: direct Monmouth → Grayslake drive (dogs stay in Jeep), lodging, attire, packing list.</li>
+                <li>⬜ Defender/LS/EV study sprint (block 60–90 minutes tonight).</li>
+                <li>⬜ Publish this page to <code>pjlosey.com/monarch</code> via Vercel.</li>
+            </ul>
+        </section>
+        <section class="resources" id="resources">
+            <h2>Useful Links</h2>
+            <a href="https://monarchweb.vehbi.me/about/" target="_blank" rel="noopener">Monarch About</a>
+            <a href="https://monarchdefender.com/projects/" target="_blank" rel="noopener">Project Gallery</a>
+            <a href="https://theevreport.com/luxury-electric-classic-defenders-arrive" target="_blank" rel="noopener">BEDEO EV Partnership</a>
+            <a href="https://www.glassdoor.com/job-listing/automotive-shop-manager-monarch-defender-llc-JV_IC1128855_KO0,23_KE24,44.htm?jl=1009928716294" target="_blank" rel="noopener">Shop Manager Posting</a>
+        </section>
+        <section id="photo-album">
+            <h2>Photo Album</h2>
+            <p>Swipe through these project shots—each thumbnail opens full size so I can share context in the moment.</p>
+            <div class="gallery">
+                <figure><img src="../../photos/Monarch/IMAG1994.jpg" alt="" data-large="../../photos/Monarch/IMAG1994.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMAG2011.jpg" alt="" data-large="../../photos/Monarch/IMAG2011.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMAG0684.jpg" alt="" data-large="../../photos/Monarch/IMAG0684.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_1574.JPG" alt="" data-large="../../photos/Monarch/IMG_1574.JPG"></figure>
+                <figure><img src="../../photos/Monarch/618594281.jpg" alt="" data-large="../../photos/Monarch/618594281.jpg"></figure>
+                <figure><img src="../../photos/Monarch/1527632502891.jpg4111743291941404085.jpg" alt="" data-large="../../photos/Monarch/1527632502891.jpg4111743291941404085.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_2045.JPG" alt="" data-large="../../photos/Monarch/IMG_2045.JPG"></figure>
+                <figure><img src="../../photos/Monarch/IMAG2130.jpg" alt="" data-large="../../photos/Monarch/IMAG2130.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_4864.JPG" alt="" data-large="../../photos/Monarch/IMG_4864.JPG"></figure>
+                <figure><img src="../../photos/Monarch/20150530_194133.jpg" alt="" data-large="../../photos/Monarch/20150530_194133.jpg"></figure>
+                <figure><img src="../../photos/Monarch/10857247_830074727065866_6273048074691223147_o.jpg" alt="" data-large="../../photos/Monarch/10857247_830074727065866_6273048074691223147_o.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_8756.jpg" alt="" data-large="../../photos/Monarch/IMG_8756.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_2819.JPG" alt="" data-large="../../photos/Monarch/IMG_2819.JPG"></figure>
+                <figure><img src="../../photos/Monarch/IMG_3402.HEIC" alt="" data-large="../../photos/Monarch/IMG_3402.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/20180606_144133.jpg" alt="" data-large="../../photos/Monarch/20180606_144133.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMAG1830.jpg" alt="" data-large="../../photos/Monarch/IMAG1830.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMAG0821.jpg" alt="" data-large="../../photos/Monarch/IMAG0821.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_0805.JPG" alt="" data-large="../../photos/Monarch/IMG_0805.JPG"></figure>
+                <figure><img src="../../photos/Monarch/IMG_0042.JPG" alt="" data-large="../../photos/Monarch/IMG_0042.JPG"></figure>
+                <figure><img src="../../photos/Monarch/20190921_180424.jpg" alt="" data-large="../../photos/Monarch/20190921_180424.jpg"></figure>
+                <figure><img src="../../photos/Monarch/20150722_152021.jpg" alt="" data-large="../../photos/Monarch/20150722_152021.jpg"></figure>
+                <figure><img src="../../photos/Monarch/20180906_132158.jpg" alt="" data-large="../../photos/Monarch/20180906_132158.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMAG1341.jpg" alt="" data-large="../../photos/Monarch/IMAG1341.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_7037.HEIC" alt="" data-large="../../photos/Monarch/IMG_7037.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/IMG_5688.JPG" alt="" data-large="../../photos/Monarch/IMG_5688.JPG"></figure>
+                <figure><img src="../../photos/Monarch/10575166_721178334622173_9041370104796207856_o.jpg" alt="" data-large="../../photos/Monarch/10575166_721178334622173_9041370104796207856_o.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMAG1765.jpg" alt="" data-large="../../photos/Monarch/IMAG1765.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMAG1203.jpg" alt="" data-large="../../photos/Monarch/IMAG1203.jpg"></figure>
+                <figure><img src="../../photos/Monarch/20150710_113855.jpg" alt="" data-large="../../photos/Monarch/20150710_113855.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMAG0985.jpg" alt="" data-large="../../photos/Monarch/IMAG0985.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMAG1034.jpg" alt="" data-large="../../photos/Monarch/IMAG1034.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_2605.HEIC" alt="" data-large="../../photos/Monarch/IMG_2605.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/20150519_152322.jpg" alt="" data-large="../../photos/Monarch/20150519_152322.jpg"></figure>
+                <figure><img src="../../photos/Monarch/45005214_2276481792375670_8190044712648835072_n.jpg" alt="" data-large="../../photos/Monarch/45005214_2276481792375670_8190044712648835072_n.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_3660.JPG" alt="" data-large="../../photos/Monarch/IMG_3660.JPG"></figure>
+                <figure><img src="../../photos/Monarch/IMG_3558.PNG" alt="" data-large="../../photos/Monarch/IMG_3558.PNG"></figure>
+                <figure><img src="../../photos/Monarch/IMG_0105.JPG" alt="" data-large="../../photos/Monarch/IMG_0105.JPG"></figure>
+                <figure><img src="../../photos/Monarch/IMAG0411.jpg" alt="" data-large="../../photos/Monarch/IMAG0411.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_4387.HEIC" alt="" data-large="../../photos/Monarch/IMG_4387.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/IMG_0227.JPG" alt="" data-large="../../photos/Monarch/IMG_0227.JPG"></figure>
+                <figure><img src="../../photos/Monarch/IMAG0504.jpg" alt="" data-large="../../photos/Monarch/IMAG0504.jpg"></figure>
+                <figure><img src="../../photos/Monarch/20181116_083236.jpg" alt="" data-large="../../photos/Monarch/20181116_083236.jpg"></figure>
+                <figure><img src="../../photos/Monarch/LND_D0CBD304-E524-446D-9FDB-EDB69374C93A.JPG" alt="" data-large="../../photos/Monarch/LND_D0CBD304-E524-446D-9FDB-EDB69374C93A.JPG"></figure>
+                <figure><img src="../../photos/Monarch/IMG_4704.JPG" alt="" data-large="../../photos/Monarch/IMG_4704.JPG"></figure>
+                <figure><img src="../../photos/Monarch/IMG_5431.JPG" alt="" data-large="../../photos/Monarch/IMG_5431.JPG"></figure>
+                <figure><img src="../../photos/Monarch/20180725_145204.jpg" alt="" data-large="../../photos/Monarch/20180725_145204.jpg"></figure>
+                <figure><img src="../../photos/Monarch/1527632363384.jpg6023342819810888610.jpg" alt="" data-large="../../photos/Monarch/1527632363384.jpg6023342819810888610.jpg"></figure>
+                <figure><img src="../../photos/Monarch/20180912_193009.jpg" alt="" data-large="../../photos/Monarch/20180912_193009.jpg"></figure>
+                <figure><img src="../../photos/Monarch/20180601_111230.jpg" alt="" data-large="../../photos/Monarch/20180601_111230.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_9809.HEIC" alt="" data-large="../../photos/Monarch/IMG_9809.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/1527632536352.jpg4391562081617989188.jpg" alt="" data-large="../../photos/Monarch/1527632536352.jpg4391562081617989188.jpg"></figure>
+                <figure><img src="../../photos/Monarch/1527632627845.jpg1241636523943415478.jpg" alt="" data-large="../../photos/Monarch/1527632627845.jpg1241636523943415478.jpg"></figure>
+                <figure><img src="../../photos/Monarch/20180719_114249.jpg" alt="" data-large="../../photos/Monarch/20180719_114249.jpg"></figure>
+                <figure><img src="../../photos/Monarch/20181010_110610.jpg" alt="" data-large="../../photos/Monarch/20181010_110610.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_7602.HEIC" alt="" data-large="../../photos/Monarch/IMG_7602.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/IMG_4278.HEIC" alt="" data-large="../../photos/Monarch/IMG_4278.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/20201007_124536~2.jpg" alt="" data-large="../../photos/Monarch/20201007_124536~2.jpg"></figure>
+                <figure><img src="../../photos/Monarch/20181005_104050.jpg" alt="" data-large="../../photos/Monarch/20181005_104050.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_2620.PNG" alt="" data-large="../../photos/Monarch/IMG_2620.PNG"></figure>
+                <figure><img src="../../photos/Monarch/18198350_1497014256989098_1879538085398374335_n.jpg" alt="" data-large="../../photos/Monarch/18198350_1497014256989098_1879538085398374335_n.jpg"></figure>
+                <figure><img src="../../photos/Monarch/20181107_153352.jpg" alt="" data-large="../../photos/Monarch/20181107_153352.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_4673.PNG" alt="" data-large="../../photos/Monarch/IMG_4673.PNG"></figure>
+                <figure><img src="../../photos/Monarch/IMG_5042.PNG" alt="" data-large="../../photos/Monarch/IMG_5042.PNG"></figure>
+                <figure><img src="../../photos/Monarch/IMG_0509.HEIC" alt="" data-large="../../photos/Monarch/IMG_0509.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/IMG_2412.JPG" alt="" data-large="../../photos/Monarch/IMG_2412.JPG"></figure>
+                <figure><img src="../../photos/Monarch/20190921_175425.jpg" alt="" data-large="../../photos/Monarch/20190921_175425.jpg"></figure>
+                <figure><img src="../../photos/Monarch/Screenshot_20210118-150936_Photos.jpg" alt="" data-large="../../photos/Monarch/Screenshot_20210118-150936_Photos.jpg"></figure>
+                <figure><img src="../../photos/Monarch/IMG_7045.HEIC" alt="" data-large="../../photos/Monarch/IMG_7045.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/IMG_9654.PNG" alt="" data-large="../../photos/Monarch/IMG_9654.PNG"></figure>
+                <figure><img src="../../photos/Monarch/IMG_3837.HEIC" alt="" data-large="../../photos/Monarch/IMG_3837.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/IMG_6474.HEIC" alt="" data-large="../../photos/Monarch/IMG_6474.HEIC"></figure>
+                <figure><img src="../../photos/Monarch/exported_62062366-264F-4C90-9A3F-5F4553697324.JPG" alt="" data-large="../../photos/Monarch/exported_62062366-264F-4C90-9A3F-5F4553697324.JPG"></figure>
+                <figure><img src="../../photos/Monarch/GALSTAD-SPGP-IC-0325-052549.JPG" alt="" data-large="../../photos/Monarch/GALSTAD-SPGP-IC-0325-052549.JPG"></figure>
+            </div>
+            <p class="album-note">Tip: load these images on your phone tonight for a quick swipe-through refresher before the meeting.</p>
+        </section>
+    </main>
+    <footer>
+        © PJ Losey · Prepared for Monarch Defender visit · pjlosey.com
+    </footer>
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="Expanded view">
+    </div>
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        document.querySelectorAll('.gallery img[data-large]').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.dataset.large;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
+        });
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            lightboxImg.src = '';
+        });
+    </script>
+</body>
+</html>
